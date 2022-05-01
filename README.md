@@ -6,4 +6,4 @@
 
 ![demo](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
-![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/gradle-action-build.yml/badge.svg)
+![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/gradle-build-pr.yml/badge.svg)
