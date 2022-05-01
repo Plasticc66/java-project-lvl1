@@ -13,4 +13,4 @@
 
 
 
-![example event parameter](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/gradle-build-pr.yml/badge.svg?event=push)
+![example event parameter](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/try-build-1.yml/badge.svg?event=push)
