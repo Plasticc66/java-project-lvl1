@@ -11,6 +11,7 @@
 
 ![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/build-gradle.yml/badge.svg)
 
+![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/build-gradle222.yml/badge.svg)
 
 
 ![example event parameter](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/try-build-1.yml/badge.svg?event=push)
