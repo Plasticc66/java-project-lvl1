@@ -4,5 +4,6 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/gradle-build-action.yml/badge.svg)
+![demo](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
+![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/gradle-action-build/badge.svg)
