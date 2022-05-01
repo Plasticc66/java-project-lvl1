@@ -1,4 +1,4 @@
-name: Gradle Build Action
+name: github action demo
 on: [push]
 jobs:
   Explore-GitHub-Actions:
