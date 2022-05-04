@@ -38,7 +38,7 @@ public class Even {
             }
             final int numForWin = 3;
             if (winstrike == numForWin) {
-                System.out.print("Congratulations, " + name + "!");
+                System.out.println("Congratulations, " + name + "!");
                 win = true;
             }
         }
