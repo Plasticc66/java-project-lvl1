@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
-    public static void PlayEven() {
+    public static void playEven() {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May i have  your name?");
         String name = Cli.name();
@@ -16,12 +16,13 @@ public class Even {
         boolean win = false;
         int winstrike = 0;
         String rightAnswer = "";
-        while (win == false) {
-            int temp = rndm.nextInt(20);
+        while (!win) {
+            final int bound = 20;
+            int temp = rndm.nextInt(bound);
             System.out.println("Question: " + temp);
             if (temp % 2 == 0) {
                 rightAnswer = "yes";
-            }else{
+            } else {
                 rightAnswer = "no";
             }
             System.out.print("Your answer: ");
@@ -32,17 +33,14 @@ public class Even {
 
             } else {
                 winstrike = 0;
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer +
-                        "'.\nLet's try again, " + name);
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
+                        + "'.\nLet's try again, " + name);
             }
-            if (winstrike == 3) {
-
+            final int numForWin = 3;
+            if (winstrike == numForWin) {
                 System.out.print("Congratulations, " + name + "!");
                 win = true;
             }
-
-
-            }
         }
     }
-
+}

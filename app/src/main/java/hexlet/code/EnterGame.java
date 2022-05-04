@@ -1,7 +1,7 @@
 package hexlet.code;
 import java.util.Scanner;
 
-public class enterGame {
+public class EnterGame {
     public static int choiceGame() {
 
         Scanner scanner = new Scanner(System.in);
