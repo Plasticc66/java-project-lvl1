@@ -7,3 +7,7 @@
 ![build](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/build-gradle.yml/badge.svg)
 
 ![build2](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/learn-github-actions.yml/badge.svg)
+
+### lvl5 Asciinema:
+
+https://asciinema.org/a/4hBpzpa0bzjndazHG095oh3jO
