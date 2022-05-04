@@ -17,7 +17,7 @@ jobs:
       uses: gradle/gradle-build-action@v2
       
     - name: Dir
-      run: home/git/ideaProjects/app/app
+      run: cd home/git/ideaProjects/app/app
     
     - name: Execute Gradle build
       run: radle build
