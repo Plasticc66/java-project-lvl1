@@ -35,6 +35,7 @@ public class Even {
                 winstrike = 0;
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
                         + "'.\nLet's try again, " + name);
+                break;
             }
             final int numForWin = 3;
             if (winstrike == numForWin) {
