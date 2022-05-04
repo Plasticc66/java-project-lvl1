@@ -16,8 +16,5 @@ jobs:
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
       
-    - name: Dir
-      run: cd home/git/ideaProjects/app/app
-    
     - name: Execute Gradle build
-      run: radle build
+      run: gradle build
