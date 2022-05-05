@@ -10,6 +10,8 @@ public class App {
                 break;
             case 2: Even.playEven();
                 break;
+            case 3: Calc.playCalc();
+                break;
             case 0: System.out.println("Goodbye, have a nice day!");
                 break;
             default:
