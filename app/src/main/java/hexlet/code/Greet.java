@@ -1,9 +1,13 @@
 package hexlet.code;
 
+import hexlet.code.Cli;
+
 public class Greet {
-    public static void playGreet() {
+    public static String playGreet() {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May i have  your name?");
-        System.out.println("Hello, " + Cli.name());
+        String name = hexlet.code.Cli.name();
+        System.out.println("Hello, " + name);
+        return name;
     }
 }
