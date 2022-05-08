@@ -9,7 +9,7 @@ public abstract class Engine {
     public final void playThisGame() {
         //GREET + NAME
         System.out.println("\nWelcome to the Brain Games!");
-        System.out.println("May i have  your name?");
+        System.out.println("May i have your name?");
         String name = hexlet.code.Cli.name();
         System.out.println("Hello, " + name);
 
