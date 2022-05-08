@@ -22,7 +22,7 @@ public abstract class Engine {
         final int winForEnd = 3;
 
         //GAME LOGIC
-        while (winstreak<winForEnd){
+        while (winstreak < winForEnd) {
 
             //YOU CONDITION
             String rightAnswer = condition();
@@ -39,12 +39,13 @@ public abstract class Engine {
                 break;
             }
         }
-        if (winstreak==winForEnd)
-        System.out.println("Congratulations, " + name + "!");
+        if (winstreak == winForEnd) {
+            System.out.println("Congratulations, " + name + "!");
+        }
     }
 
+
     public String condition() {
-        String rightAnswerInside = null;
-        return rightAnswerInside;
+        return null;
     }
 }

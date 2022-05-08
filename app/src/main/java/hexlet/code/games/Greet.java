@@ -1,6 +1,4 @@
-package hexlet.code;
-
-import hexlet.code.Cli;
+package hexlet.code.games;
 
 public class Greet {
     public static String playGreet() {

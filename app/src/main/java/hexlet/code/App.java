@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.games.Greet;
 import hexlet.code.games.ShortCalc;
 import hexlet.code.games.ShortEven;
 
