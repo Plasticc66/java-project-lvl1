@@ -28,19 +28,19 @@ public class GDC extends Engine {
             return Integer.toString(rightAnswerInside);
         } else {
 
-        ArrayList<Integer> divTemp1 = new ArrayList<>();
-        ArrayList<Integer> divTemp2 = new ArrayList<>();
+            ArrayList<Integer> divTemp1 = new ArrayList<>();
+            ArrayList<Integer> divTemp2 = new ArrayList<>();
 
-        for (int i = 1; i < Math.abs(temp1) + 1; i++) {
-            if (temp1 % i == 0) {
-                divTemp1.add(i);
+            for (int i = 1; i < Math.abs(temp1) + 1; i++) {
+                if (temp1 % i == 0) {
+                    divTemp1.add(i);
+                }
             }
-        }
-        for (int i = 1; i < Math.abs(temp2) + 1; i++) {
-            if (temp2 % i == 0) {
-                divTemp2.add(i);
+            for (int i = 1; i < Math.abs(temp2) + 1; i++) {
+                if (temp2 % i == 0) {
+                    divTemp2.add(i);
+                }
             }
-        }
 
             for (int i = divTemp1.size() - 1; i >= 0; i--) {
                 for (int j = divTemp2.size() - 1; j >= 0; j--) {
@@ -53,13 +53,10 @@ public class GDC extends Engine {
                             j++;
                         }
                     }
-
                 }
                 break;
             }
-
             return Integer.toString(rightAnswerInside);
         }
-
     }
 }
