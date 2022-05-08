@@ -4,11 +4,11 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class ShortCalc extends Engine {
-    public final void getRule() {
+public class Calc extends Engine {
+    public final String getRule() {
         super.getRule();
         String rule = "\nWhat is the result of the expression?";
-        System.out.println(rule);
+        return rule;
     }
 
     public final String condition() {
@@ -23,17 +23,17 @@ public class ShortCalc extends Engine {
 
         switch (oper) {
             case 0:
-                System.out.println("Question: " + temp1 + " + " + temp2);
+                System.out.println("\nQuestion: " + temp1 + " + " + temp2);
                 int rightAnswerInside = temp1 + temp2;
                 return Integer.toString(rightAnswerInside);
 
             case 1:
-                System.out.println("Question: " + temp1 + " - " + temp2);
+                System.out.println("\nQuestion: " + temp1 + " - " + temp2);
                 rightAnswerInside = temp1 - temp2;
                 return Integer.toString(rightAnswerInside);
 
             default:
-                System.out.println("Question: " + temp1 + " * " + temp2);
+                System.out.println("\nQuestion: " + temp1 + " * " + temp2);
                 rightAnswerInside = temp1 * temp2;
                 return Integer.toString(rightAnswerInside);
         }

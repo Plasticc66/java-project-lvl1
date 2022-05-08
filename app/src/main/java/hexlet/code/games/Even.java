@@ -4,11 +4,11 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class ShortEven extends Engine {
-    public final void getRule() {
+public class Even extends Engine {
+    public final String getRule() {
         super.getRule();
         String rule = "\nAnswer 'yes' if number is even, otherwise answer 'no'.";
-        System.out.println(rule);
+        return rule;
     }
 
 
@@ -20,7 +20,7 @@ public class ShortEven extends Engine {
         final int rndmBound = 20;
         int temp = rndm.nextInt(rndmBound);
 
-        System.out.println("Question: " + temp);
+        System.out.println("\nQuestion: " + temp);
         if (temp % 2 == 0) {
             rightAnswerInside = "yes";
         } else {

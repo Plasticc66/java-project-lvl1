@@ -3,7 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public abstract class Engine {
-    public void getRule() {
+    public String getRule() {
+        String rule = null;
+        return rule;
     }
 
     public final void playThisGame() {
@@ -14,7 +16,7 @@ public abstract class Engine {
         System.out.println("Hello, " + name);
 
         //RULE
-        getRule();
+        System.out.println(getRule());
 
         //DECLARATION OF VARIABLES
         Scanner scanner = new Scanner(System.in);

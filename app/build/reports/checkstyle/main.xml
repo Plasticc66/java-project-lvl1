@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.37">
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/App.java">
-<error line="26" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="27" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="31" column="18" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Cli.java">
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Engine.java">
-<error line="48" column="5" severity="error" message="Class &apos;Engine&apos; looks like designed for extension (can be subclassed), but the method &apos;condition&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Engine&apos; final or making the method &apos;condition&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="6" column="5" severity="error" message="Class &apos;Engine&apos; looks like designed for extension (can be subclassed), but the method &apos;getRule&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Engine&apos; final or making the method &apos;getRule&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="50" column="5" severity="error" message="Class &apos;Engine&apos; looks like designed for extension (can be subclassed), but the method &apos;condition&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Engine&apos; final or making the method &apos;condition&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/EnterGame.java">
 </file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Calc.java">
+</file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Even.java">
+</file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/GDC.java">
+<error line="11" column="6" severity="error" message="&apos;method def modifier&apos; has incorrect indentation level 5, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="12" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="13" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="14" column="6" severity="error" message="&apos;method def rcurly&apos; has incorrect indentation level 5, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="16" column="6" severity="error" message="&apos;method def modifier&apos; has incorrect indentation level 5, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="17" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="18" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="19" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="20" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="22" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="23" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="24" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="26" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="27" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="29" column="10" severity="error" message="&apos;for&apos; has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="29" column="21" severity="error" message="&apos;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="30" column="14" severity="error" message="&apos;if&apos; has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="31" column="18" severity="error" message="&apos;if&apos; child has incorrect indentation level 17, expected level should be 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="32" column="14" severity="error" message="&apos;if rcurly&apos; has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="33" column="10" severity="error" message="&apos;for rcurly&apos; has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="34" column="10" severity="error" message="&apos;for&apos; has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="34" column="21" severity="error" message="&apos;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="35" column="14" severity="error" message="&apos;if&apos; has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="36" column="18" severity="error" message="&apos;if&apos; child has incorrect indentation level 17, expected level should be 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="37" column="14" severity="error" message="&apos;if rcurly&apos; has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="38" column="10" severity="error" message="&apos;for rcurly&apos; has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="40" column="10" severity="error" message="&apos;for&apos; has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="40" column="38" severity="error" message="&apos;-&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="40" column="38" severity="error" message="&apos;-&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="41" column="14" severity="error" message="&apos;for&apos; has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="41" column="42" severity="error" message="&apos;-&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="41" column="42" severity="error" message="&apos;-&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="42" column="18" severity="error" message="&apos;if&apos; has incorrect indentation level 17, expected level should be 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="43" column="22" severity="error" message="&apos;if&apos; child has incorrect indentation level 21, expected level should be 20." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="44" column="22" severity="error" message="&apos;if&apos; child has incorrect indentation level 21, expected level should be 20." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="45" column="18" severity="error" message="&apos;if rcurly&apos; has incorrect indentation level 17, expected level should be 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="46" column="22" severity="error" message="&apos;if&apos; has incorrect indentation level 21, expected level should be 20." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="47" column="26" severity="error" message="&apos;if&apos; child has incorrect indentation level 25, expected level should be 24." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="48" column="26" severity="error" message="&apos;if&apos; child has incorrect indentation level 25, expected level should be 24." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="49" column="22" severity="error" message="&apos;if rcurly&apos; has incorrect indentation level 21, expected level should be 20." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="50" column="18" severity="error" message="&apos;else rcurly&apos; has incorrect indentation level 17, expected level should be 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="52" column="14" severity="error" message="&apos;for rcurly&apos; has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="53" column="14" severity="error" message="&apos;for&apos; child has incorrect indentation level 13, expected level should be 12." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="54" column="10" severity="error" message="&apos;for rcurly&apos; has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="56" column="10" severity="error" message="&apos;method def&apos; child has incorrect indentation level 9, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="57" column="6" severity="error" message="&apos;method def rcurly&apos; has incorrect indentation level 5, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Greet.java">
-</file>
-<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/ShortCalc.java">
-</file>
-<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/ShortEven.java">
 </file>
 </checkstyle>
