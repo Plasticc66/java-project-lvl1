@@ -1,14 +1,12 @@
 package hexlet.code;
 
-import hexlet.code.games.ShortEven;
-
 import java.util.Scanner;
 
 public abstract class Engine {
     public void getRule() {
     }
 
-    public void playThisGame() {
+    public final void playThisGame() {
         //GREET + NAME
         System.out.println("\nWelcome to the Brain Games!");
         System.out.println("May i have  your name?");
@@ -41,6 +39,7 @@ public abstract class Engine {
                 break;
             }
         }
+        if (winstreak==winForEnd)
         System.out.println("Congratulations, " + name + "!");
     }
 
