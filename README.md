@@ -10,4 +10,4 @@
 
 Demo Even: https://asciinema.org/a/4hBpzpa0bzjndazHG095oh3jO
 
-Demo Calc: 
+Demo Calc: https://asciinema.org/a/BZpotjOecodO4sWjN6iuM9Bf3
