@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.37">
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/App.java">
+<error line="26" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Cli.java">
 </file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Engine.java">
+<error line="48" column="5" severity="error" message="Class &apos;Engine&apos; looks like designed for extension (can be subclassed), but the method &apos;condition&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Engine&apos; final or making the method &apos;condition&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/EnterGame.java">
 </file>
-<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Even.java">
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Greet.java">
 </file>
-<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Greet.java">
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/ShortCalc.java">
+</file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/ShortEven.java">
 </file>
 </checkstyle>
