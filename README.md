@@ -11,3 +11,5 @@
 Demo Even: https://asciinema.org/a/4hBpzpa0bzjndazHG095oh3jO
 
 Demo Calc: https://asciinema.org/a/BZpotjOecodO4sWjN6iuM9Bf3
+
+Demo GDC: https://asciinema.org/a/USwCfTHU65HzMiKCBHIk7MjY4
