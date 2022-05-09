@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.GDC;
-import hexlet.code.games.Greet;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
+import hexlet.code.games.*;
 
 public class App {
     public static void main(String[] args) {
@@ -13,7 +10,7 @@ public class App {
                 + "\n2 - Even"
                 + "\n3 - Calc"
                 + "\n4 - GDC"
-                + "\n5 - name5"
+                + "\n5 - Progression"
                 + "\n0 - Exit");
         System.out.print("your choice: ");
         switch (EnterGame.choiceGame()) {
@@ -32,6 +29,9 @@ public class App {
                 GDC gdc = new GDC();
                 gdc.playThisGame();
                 break;
+            case 5:
+                Progression progression = new Progression();
+                progression.playThisGame();
             case 0: System.out.println("Goodbye, have a nice day!");
                 break;
             default:

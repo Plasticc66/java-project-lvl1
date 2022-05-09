@@ -14,12 +14,12 @@ public class Calc extends Engine {
     public final String condition() {
         super.condition();
         Random rndm = new Random();
-        final int rndmBound = 20;
+        final int rndmBound = 18;
         final int operBound = 3;
         int oper = rndm.nextInt(operBound);
 
-        int temp1 = rndm.nextInt(rndmBound);
-        int temp2 = rndm.nextInt(rndmBound);
+        int temp1 = rndm.nextInt(rndmBound)+2;
+        int temp2 = rndm.nextInt(rndmBound)+2;
 
         switch (oper) {
             case 0:
@@ -37,9 +37,6 @@ public class Calc extends Engine {
                 rightAnswerInside = temp1 * temp2;
                 return Integer.toString(rightAnswerInside);
         }
-
-
-
 
     }
 

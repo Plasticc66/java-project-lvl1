@@ -30,7 +30,7 @@ public abstract class Engine {
             String rightAnswer = condition();
             //YOU CONDITION
 
-            System.out.println("Your answer: ");
+            System.out.print("Your answer: ");
             String playerAnswer = scanner.nextLine();
             if (playerAnswer.equals(rightAnswer)) {
                 winstreak++;
