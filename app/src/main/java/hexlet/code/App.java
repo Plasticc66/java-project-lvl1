@@ -32,6 +32,7 @@ public class App {
             case 5:
                 Progression progression = new Progression();
                 progression.playThisGame();
+                break;
             case 0: System.out.println("Goodbye, have a nice day!");
                 break;
             default:

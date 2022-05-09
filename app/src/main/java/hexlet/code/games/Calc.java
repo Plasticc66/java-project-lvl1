@@ -18,8 +18,8 @@ public class Calc extends Engine {
         final int operBound = 3;
         int oper = rndm.nextInt(operBound);
 
-        int temp1 = rndm.nextInt(rndmBound)+2;
-        int temp2 = rndm.nextInt(rndmBound)+2;
+        int temp1 = rndm.nextInt(rndmBound) + 2;
+        int temp2 = rndm.nextInt(rndmBound) + 2;
 
         switch (oper) {
             case 0:

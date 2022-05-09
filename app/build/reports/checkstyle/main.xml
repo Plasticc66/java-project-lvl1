@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.37">
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/App.java">
-<error line="27" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="31" column="18" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="3" column="25" severity="error" message="Using the &apos;.*&apos; form of import should be avoided - hexlet.code.games.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="24" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="28" column="18" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="32" column="18" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Cli.java">
 </file>
@@ -19,5 +21,7 @@
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/GDC.java">
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Greet.java">
+</file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Progression.java">
 </file>
 </checkstyle>
