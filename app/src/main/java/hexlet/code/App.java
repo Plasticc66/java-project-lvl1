@@ -11,6 +11,7 @@ public class App {
                 + "\n3 - Calc"
                 + "\n4 - GDC"
                 + "\n5 - Progression"
+                + "\n6 - Prime"
                 + "\n0 - Exit");
         System.out.print("your choice: ");
         switch (EnterGame.choiceGame()) {
@@ -32,6 +33,10 @@ public class App {
             case 5:
                 Progression progression = new Progression();
                 progression.playThisGame();
+                break;
+            case 6:
+                Prime prime = new Prime();
+                prime.playThisGame();
                 break;
             case 0: System.out.println("Goodbye, have a nice day!");
                 break;
