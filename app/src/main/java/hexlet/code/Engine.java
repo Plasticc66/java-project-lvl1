@@ -3,8 +3,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 public abstract class Engine {
-    public abstract String getRule();
-
     public final void playThisGame() {
         //GREET + NAME
         System.out.println("\nWelcome to the Brain Games!");
@@ -43,6 +41,7 @@ public abstract class Engine {
         }
     }
 
+    public abstract String getRule();
 
     public abstract String condition();
 }
