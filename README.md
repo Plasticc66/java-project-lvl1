@@ -15,3 +15,5 @@ Demo Calc: https://asciinema.org/a/BZpotjOecodO4sWjN6iuM9Bf3
 Demo GDC: https://asciinema.org/a/USwCfTHU65HzMiKCBHIk7MjY4
 
 Demo Progression: https://asciinema.org/a/Wqz8hDRjcVScLlXiDtc8Pkqpk
+
+Demo Prime: https://asciinema.org/a/8Xt0DVQCsUJnrkKBOUE6zYXq9
