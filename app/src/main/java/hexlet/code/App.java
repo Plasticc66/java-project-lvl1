@@ -1,9 +1,21 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-
+//import hexlet.code.games.*;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+import hexlet.code.games.GDC;
+import hexlet.code.games.Greet;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
 public class App {
     public static void main(String[] args) {
+        final int greetNum = 1;
+        final int evenNum = 2;
+        final int calcNum = 3;
+        final int gdcNum = 4;
+        final int progressionNum = 5;
+        final int primeNum = 6;
+        final int exitNum = 0;
 
         System.out.println("\nPlease enter the game number and press Enter"
                 + "\n1 - Greet"
@@ -15,30 +27,30 @@ public class App {
                 + "\n0 - Exit");
         System.out.print("your choice: ");
         switch (EnterGame.choiceGame()) {
-            case 1:
+            case greetNum:
                 Greet.playGreet();
                 break;
-            case 2:
+            case evenNum:
                 Even even = new Even();
                 even.playThisGame();
                 break;
-            case 3:
+            case calcNum:
                 Calc calc = new Calc();
                 calc.playThisGame();
                 break;
-            case 4:
+            case gdcNum:
                 GDC gdc = new GDC();
                 gdc.playThisGame();
                 break;
-            case 5:
+            case progressionNum:
                 Progression progression = new Progression();
                 progression.playThisGame();
                 break;
-            case 6:
+            case primeNum:
                 Prime prime = new Prime();
                 prime.playThisGame();
                 break;
-            case 0: System.out.println("Goodbye, have a nice day!");
+            case exitNum: System.out.println("Goodbye, have a nice day!");
                 break;
             default:
                 System.out.println("wrong data T_T");

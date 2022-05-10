@@ -3,10 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public abstract class Engine {
-    public String getRule() {
-        String rule = null;
-        return rule;
-    }
+    public abstract String getRule();
 
     public final void playThisGame() {
         //GREET + NAME
@@ -47,7 +44,5 @@ public abstract class Engine {
     }
 
 
-    public String condition() {
-        return null;
-    }
+    public abstract String condition();
 }

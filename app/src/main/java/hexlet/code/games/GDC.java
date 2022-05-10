@@ -8,12 +8,10 @@ import java.util.Random;
 public class GDC extends Engine {
 
     public final String getRule() {
-        super.getRule();
         return "\nFind the greatest common divisor of given numbers.";
     }
 
     public final String condition() {
-        super.condition();
         Random rndm = new Random();
         final int rndmBound = 98;
         int rightAnswerInside = 1;

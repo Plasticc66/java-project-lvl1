@@ -6,13 +6,11 @@ import java.util.Random;
 
 public class Calc extends Engine {
     public final String getRule() {
-        super.getRule();
         String rule = "\nWhat is the result of the expression?";
         return rule;
     }
 
     public final String condition() {
-        super.condition();
         Random rndm = new Random();
         final int rndmBound = 18;
         final int operBound = 3;

@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.37">
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/App.java">
-<error line="3" column="25" severity="error" message="Using the &apos;.*&apos; form of import should be avoided - hexlet.code.games.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
-<error line="24" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="28" column="18" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-<error line="32" column="18" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Cli.java">
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/Engine.java">
-<error line="6" column="5" severity="error" message="Class &apos;Engine&apos; looks like designed for extension (can be subclassed), but the method &apos;getRule&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Engine&apos; final or making the method &apos;getRule&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="50" column="5" severity="error" message="Class &apos;Engine&apos; looks like designed for extension (can be subclassed), but the method &apos;condition&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Engine&apos; final or making the method &apos;condition&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/EnterGame.java">
 </file>
@@ -21,6 +15,8 @@
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/GDC.java">
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Greet.java">
+</file>
+<file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Prime.java">
 </file>
 <file name="/home/plasticc66/git/ideaProjects/app/app/src/main/java/hexlet/code/games/Progression.java">
 </file>

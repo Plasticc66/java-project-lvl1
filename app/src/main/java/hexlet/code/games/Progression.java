@@ -6,13 +6,11 @@ import java.util.Random;
 
 public class Progression extends Engine {
     public final String getRule() {
-        super.getRule();
         String rule = "\nWhat number is missing in the progression?";
         return rule;
     }
 
     public final String condition() {
-        super.condition();
         Random rndm = new Random();
         final int rndmBound = 20;
         final int operBound = 3;

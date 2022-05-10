@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class Even extends Engine {
     public final String getRule() {
-        super.getRule();
         String rule = "\nAnswer 'yes' if number is even, otherwise answer 'no'.";
         return rule;
     }
@@ -14,7 +13,6 @@ public class Even extends Engine {
 
 
     public final String condition() {
-        super.condition();
         String rightAnswerInside = null;
         Random rndm = new Random();
         final int rndmBound = 20;
