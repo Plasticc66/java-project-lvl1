@@ -19,7 +19,7 @@
 #    - name: Execute Gradle build
 #      run: gradle build
 
-name: Java CI
+name: Build
 
 on:
   - push
