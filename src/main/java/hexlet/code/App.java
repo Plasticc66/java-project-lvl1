@@ -1,12 +1,12 @@
 package hexlet.code;
 
-//import hexlet.code.games.*;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 import hexlet.code.games.GDC;
 import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+
 public class App {
     public static void main(String[] args) {
         final int greetNum = 1;
