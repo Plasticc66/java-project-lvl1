@@ -21,6 +21,8 @@ public class App {
             case greetNum:
                 Greet.playGreet();
                 break;
+            case exitNum: System.out.println("Goodbye, have a nice day!");
+                break;
         }
 
         System.out.println("\nPlease enter the game number and press Enter."
