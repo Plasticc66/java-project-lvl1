@@ -17,14 +17,6 @@ public class App {
         final int primeNum = 6;
         final int exitNum = 0;
 
-        switch (EnterGame.choiceGame()) {
-            case greetNum:
-                Greet.playGreet();
-                break;
-            case exitNum: System.out.println("Goodbye, have a nice day!");
-                break;
-        }
-
         System.out.println("\nPlease enter the game number and press Enter."
                 + "\n1 - Greet"
                 + "\n2 - Even"
