@@ -5,7 +5,7 @@ public class Greet {
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May i have  your name? ");
         String name = hexlet.code.Cli.name();
-        System.out.println("Hello, " + name + "!");
+        System.out.println("\nHello, " + name + "!");
         return name;
     }
 }

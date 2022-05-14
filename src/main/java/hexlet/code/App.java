@@ -17,10 +17,6 @@ public class App {
         final int primeNum = 6;
         final int exitNum = 0;
 
-        System.out.print("May i have  your name? ");
-        String name = hexlet.code.Cli.name();
-        System.out.println("Hello, " + name + "!");
-
         System.out.println("\nPlease enter the game number and press Enter."
                 + "\n1 - Greet"
                 + "\n2 - Even"
