@@ -17,8 +17,7 @@ public class App {
         final int primeNum = 6;
         final int exitNum = 0;
 
-        System.out.println("May i have  your name?");
-        Cli.name();
+        Greet.playGreet();
 
         System.out.println("\nPlease enter the game number and press Enter"
                 + "\n1 - Greet"
