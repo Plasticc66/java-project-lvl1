@@ -16,9 +16,8 @@ public class App {
         final int progressionNum = 5;
         final int primeNum = 6;
         final int exitNum = 0;
-
-        System.out.println("May i have  your name?");
-        System.out.println("\nPlease enter the game number and press Enter"
+        
+        System.out.println("\nPlease enter the game number and press Enter."
                 + "\n1 - Greet"
                 + "\n2 - Even"
                 + "\n3 - Calc"
