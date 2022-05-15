@@ -33,7 +33,7 @@ public abstract class Engine {
                 //System.out.println("Correct!");
             } else {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                        + "'.\nLet's try again, " + name);
+                        + "'.\nLet's try again, " + name + "!");
                 break;
             }
         }
