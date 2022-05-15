@@ -18,7 +18,7 @@ public class Even extends Engine {
         final int rndmBound = 20;
         int temp = rndm.nextInt(rndmBound);
 
-        //System.out.println("\nQuestion: " + temp);
+        System.out.println("\nQuestion: " + temp);
         if (temp % 2 == 0) {
             rightAnswerInside = "yes";
         } else {
