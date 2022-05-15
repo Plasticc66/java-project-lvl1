@@ -5,13 +5,14 @@ import java.util.Scanner;
 public abstract class Engine {
     public final void playThisGame() {
         //GREET + NAME
-        System.out.println("\nWelcome to the Brain Games!");
+        /*System.out.println("\nWelcome to the Brain Games!");
         System.out.println("May i have your name?");
         String name = hexlet.code.Cli.name();
         System.out.println("Hello, " + name);
 
         //RULE
-        System.out.println(getRule());
+        System.out.println(getRule());*/
+        String name = "Tirion";
 
         //DECLARATION OF VARIABLES
         Scanner scanner = new Scanner(System.in);
@@ -25,14 +26,15 @@ public abstract class Engine {
             String rightAnswer = condition();
             //YOU CONDITION
 
-            System.out.print("Your answer: ");
+            //System.out.print("Your answer: ");
             String playerAnswer = scanner.nextLine();
             if (playerAnswer.equals(rightAnswer)) {
                 winstreak++;
-                System.out.println("Correct!");
+                //System.out.println("Correct!");
             } else {
-                System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                        + "'.\nLet's try again, " + name);
+                /*System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
+                        + "'.\nLet's try again, " + name);*/
+                System.out.println("Let's try again, " + name);
                 break;
             }
         }
