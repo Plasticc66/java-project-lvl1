@@ -26,11 +26,11 @@ public abstract class Engine {
             String rightAnswer = condition();
             //YOU CONDITION
 
-            //System.out.print("Your answer: ");
+            System.out.print("Your answer: ");
             String playerAnswer = scanner.nextLine();
             if (playerAnswer.equals(rightAnswer)) {
                 winstreak++;
-                //System.out.println("Correct!");
+                System.out.println("Correct!");
             } else {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
                         + "'.\nLet's try again, " + name + "!");

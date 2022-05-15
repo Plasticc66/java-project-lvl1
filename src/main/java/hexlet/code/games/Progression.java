@@ -31,7 +31,7 @@ public class Progression extends Engine {
 
         String rightAnswerInside = progressionLine[skip];
         progressionLine[skip] = "..";
-        System.out.println("\nQuestion: ");
+        System.out.print("\nQuestion: ");
         for (int i = 0; i < progressionLine.length; i++) {
             System.out.print(progressionLine[i] + " ");
         }
