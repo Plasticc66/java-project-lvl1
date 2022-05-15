@@ -17,7 +17,8 @@ public class App {
         final int primeNum = 6;
         final int exitNum = 0;
 
-        System.out.println("Please enter the game number and press Enter."
+        System.out.println("May I have your name?");
+              /*  "\nPlease enter the game number and press Enter."
                 + "\n1 - Greet"
                 + "\n2 - Even"
                 + "\n3 - Calc"
@@ -25,7 +26,7 @@ public class App {
                 + "\n5 - Progression"
                 + "\n6 - Prime"
                 + "\n0 - Exit");
-        System.out.print("your choice: ");
+        System.out.print("your choice: ");*/
         switch (EnterGame.choiceGame()) {
             case greetNum:
                 Greet.playGreet();
