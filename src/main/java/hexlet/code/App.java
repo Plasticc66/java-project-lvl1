@@ -3,9 +3,9 @@ package hexlet.code;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 import hexlet.code.games.GDC;
-import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.newEngine.Cli;
 
 public class App {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class App {
         System.out.print("your choice: ");
         switch (EnterGame.choiceGame()) {
             case greetNum:
-                Greet.playGreet();
+                Cli.greeting();
                 break;
             case evenNum:
                 Even even = new Even();
@@ -50,7 +50,8 @@ public class App {
                 Prime prime = new Prime();
                 prime.playThisGame();
                 break;
-            case exitNum: System.out.println("Goodbye, have a nice day!");
+            case exitNum:
+                System.out.println("Goodbye, have a nice day!");
                 break;
             default:
                 System.out.println("wrong data T_T");

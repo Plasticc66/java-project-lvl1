@@ -12,17 +12,15 @@ public class Progression extends Engine {
 
     public final String condition() {
         Random rndm = new Random();
-        final int rndmBound = 20;
-        final int operBound = 3;
-        final int skipBound = 9;
+        final int rndmBound = 21;
+        final int skipBound = 10;
         final int stepBound = 7;
-        final int lenghtArray = 10;
+        final int lengthArray = 10;
 
         int step = rndm.nextInt(stepBound) + 2;
         int firstNum = rndm.nextInt(rndmBound);
-        int oper = rndm.nextInt(operBound);
         int skip = rndm.nextInt(skipBound);
-        String[] progressionLine = new String[lenghtArray];
+        String[] progressionLine = new String[lengthArray];
         progressionLine[0] = Integer.toString(firstNum);
 
         for (int i = 1; i < progressionLine.length; i++) {

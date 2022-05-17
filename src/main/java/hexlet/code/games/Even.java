@@ -16,10 +16,10 @@ public class Even extends Engine {
         String rightAnswerInside = null;
         Random rndm = new Random();
         final int rndmBound = 20;
-        int temp = rndm.nextInt(rndmBound);
+        int num = rndm.nextInt(rndmBound);
 
-        System.out.println("\nQuestion: " + temp);
-        if (temp % 2 == 0) {
+        System.out.println("\nQuestion: " + num);
+        if (num % 2 == 0) {
             rightAnswerInside = "yes";
         } else {
             rightAnswerInside = "no";

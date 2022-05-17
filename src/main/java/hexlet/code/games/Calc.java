@@ -30,10 +30,12 @@ public class Calc extends Engine {
                 rightAnswerInside = temp1 - temp2;
                 return Integer.toString(rightAnswerInside);
 
-            default:
+            case 2:
                 System.out.println("\nQuestion: " + temp1 + " * " + temp2);
                 rightAnswerInside = temp1 * temp2;
                 return Integer.toString(rightAnswerInside);
+            default:
+                throw new Error("Unknown value: " + oper);
         }
 
     }

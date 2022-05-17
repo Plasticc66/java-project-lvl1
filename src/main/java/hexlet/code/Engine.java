@@ -1,14 +1,14 @@
 package hexlet.code;
 
+import hexlet.code.newEngine.Cli;
+
 import java.util.Scanner;
 
 public abstract class Engine {
     public final void playThisGame() {
         //GREET + NAME
-        System.out.println("\nWelcome to the Brain Games!");
-        System.out.println("May i have your name?");
-        String name = hexlet.code.Cli.name();
-        System.out.println("Hello, " + name);
+
+        String name = "mc borow";
 
         //RULE
         System.out.println(getRule());

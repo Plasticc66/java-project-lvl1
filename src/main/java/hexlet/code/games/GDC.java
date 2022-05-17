@@ -13,7 +13,7 @@ public class GDC extends Engine {
 
     public final String condition() {
         Random rndm = new Random();
-        final int rndmBound = 98;
+        final int rndmBound = 100;
         int rightAnswerInside = 1;
 
         while (rightAnswerInside == 1) {
