@@ -1,18 +1,15 @@
 package hexlet.code;
-
-import hexlet.code.newEngine.Cli;
-
 import java.util.Scanner;
+public class Engine {
 
-public abstract class Engine {
-    public final void playThisGame() {
+    public static void playThisGame(String rule, String question, int rightAnswer) {
         //GREET + NAME
 
         String name = "mc borow";
 
         //RULE
-        System.out.println(getRule());
-
+        System.out.println(rule);
+        System.out.println(question);
 
         //DECLARATION OF VARIABLES
         Scanner scanner = new Scanner(System.in);
@@ -21,10 +18,6 @@ public abstract class Engine {
 
         //GAME LOGIC
         while (winstreak < winForEnd) {
-
-            //YOU CONDITION
-            String rightAnswer = condition();
-            //YOU CONDITION
 
             System.out.print("Your answer: ");
             String playerAnswer = scanner.nextLine();
@@ -41,8 +34,4 @@ public abstract class Engine {
             System.out.println("Congratulations, " + name + "!");
         }
     }
-
-    public abstract String getRule();
-
-    public abstract String condition();
 }

@@ -4,13 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class Even extends Engine {
-    public final String getRule() {
-        String rule = "\nAnswer 'yes' if number is even, otherwise answer 'no'.";
-        return rule;
-    }
-
-
+public class Even {
 
     public final String condition() {
         String rightAnswerInside = null;

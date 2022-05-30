@@ -5,11 +5,8 @@ import hexlet.code.Engine;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class GDC extends Engine {
+public class GDC {
 
-    public final String getRule() {
-        return "\nFind the greatest common divisor of given numbers.";
-    }
 
     public final String condition() {
         Random rndm = new Random();

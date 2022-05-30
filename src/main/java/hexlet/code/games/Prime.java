@@ -4,10 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class Prime extends Engine {
-    public final String getRule() {
-        return "\nAnswer 'yes' if given number is prime. Otherwise answer 'no'.";
-    }
+public class Prime {
 
     public final String condition() {
 

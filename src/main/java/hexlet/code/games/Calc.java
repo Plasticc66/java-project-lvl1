@@ -1,16 +1,9 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
-
 import java.util.Random;
+public class Calc {
+    public static void playCalc() {
 
-public class Calc extends Engine {
-    public final String getRule() {
-        String rule = "\nWhat is the result of the expression?";
-        return rule;
-    }
-
-    public final String condition() {
         Random rndm = new Random();
         final int rndmBound = 18;
         final int operBound = 3;
@@ -19,25 +12,27 @@ public class Calc extends Engine {
         int temp1 = rndm.nextInt(rndmBound) + 2;
         int temp2 = rndm.nextInt(rndmBound) + 2;
 
+        String rule = "What is the result of the expression?";
+        String question = "\nQuestion: ";
+        int rightAnswer;
+
         switch (oper) {
             case 0:
-                System.out.println("\nQuestion: " + temp1 + " + " + temp2);
-                int rightAnswerInside = temp1 + temp2;
-                return Integer.toString(rightAnswerInside);
+                question += temp1 + " + " + temp2;
+                rightAnswer = temp1 + temp2;
 
             case 1:
-                System.out.println("\nQuestion: " + temp1 + " - " + temp2);
-                rightAnswerInside = temp1 - temp2;
-                return Integer.toString(rightAnswerInside);
+                question += temp1 + " - " + temp2;
+                rightAnswer = temp1 - temp2;
 
             case 2:
-                System.out.println("\nQuestion: " + temp1 + " * " + temp2);
-                rightAnswerInside = temp1 * temp2;
-                return Integer.toString(rightAnswerInside);
+                question +=  temp1 + " * " + temp2;
+                rightAnswer = temp1 * temp2;
             default:
                 throw new Error("Unknown value: " + oper);
         }
 
+        Engine.playThisGame(rule, question, rightAnswer);
     }
 
 }

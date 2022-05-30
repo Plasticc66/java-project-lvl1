@@ -4,11 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class Progression extends Engine {
-    public final String getRule() {
-        String rule = "\nWhat number is missing in the progression?";
-        return rule;
-    }
+public class Progression {
 
     public final String condition() {
         Random rndm = new Random();
