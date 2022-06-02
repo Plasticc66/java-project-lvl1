@@ -1,13 +1,22 @@
 package hexlet.code;
 import java.util.Scanner;
 public class Engine {
+    public static String rule;
+    public static String question;
+    public static int rightAnswer;
 
-    public static void playThisGame(String rule, String question, int rightAnswer) {
+    public Engine(String rule, String question, int rightAnswer) {
+        this.rule = rule;
+        this.question = question;
+        this.rightAnswer = rightAnswer;
+    }
+
+    public static void playThisGame() {
         //GREET + NAME
 
         String name = "mc borow";
 
-        //RULE
+        //RULE + QUESTION
         System.out.println(rule);
         System.out.println(question);
 
@@ -16,7 +25,7 @@ public class Engine {
         int winstreak = 0;
         final int winForEnd = 3;
 
-        //GAME LOGIC
+        //WIN-LOSE LOGIC
         while (winstreak < winForEnd) {
 
             System.out.print("Your answer: ");
