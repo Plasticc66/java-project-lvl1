@@ -28,7 +28,7 @@ public class App {
         System.out.print("your choice: ");
         switch (EnterGame.choiceGame()) {
             case greetNum:
-                //Cli.greeting();
+                Cli.greeting();
                 break;
             case evenNum:
                 Even even = new Even();

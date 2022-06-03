@@ -1,9 +1,12 @@
 package hexlet.code;
+import hexlet.code.games.Calc;
+
 import java.util.Scanner;
 public class Engine {
     public static String rule;
     public static String question;
     public static int rightAnswer;
+
 
     public Engine(String rule, String question, int rightAnswer) {
         this.rule = rule;
@@ -11,36 +14,37 @@ public class Engine {
         this.rightAnswer = rightAnswer;
     }
 
-    public static void playThisGame() {
+    public static boolean playThisGame() {
         //GREET + NAME
 
         String name = "mc borow";
 
-        //RULE + QUESTION
+        //RULE
         System.out.println(rule);
-        System.out.println(question);
 
         //DECLARATION OF VARIABLES
         Scanner scanner = new Scanner(System.in);
-        int winstreak = 0;
         final int winForEnd = 3;
+        boolean result = false;
 
         //WIN-LOSE LOGIC
-        while (winstreak < winForEnd) {
-
+        for (int i=0; i < winForEnd; i++) {
+            System.out.println(question);
             System.out.print("Your answer: ");
-            String playerAnswer = scanner.nextLine();
-            if (playerAnswer.equals(rightAnswer)) {
-                winstreak++;
+            int playerAnswer = scanner.nextInt();
+            if (playerAnswer == rightAnswer) {
                 System.out.println("Correct!");
+                result = true;
             } else {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
                         + "'.\nLet's try again, " + name + "!");
                 break;
             }
+            if (i == winForEnd-1) {
+                System.out.println("Congratulations, " + name + "!");
+            }
         }
-        if (winstreak == winForEnd) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+        return result;
+
     }
 }

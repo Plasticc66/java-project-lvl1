@@ -50,15 +50,15 @@ public class Calc {
         final int rndmBound = 18;
         final int operBound = 3;
         Random rndm = new Random();
-        int oper = rndm.nextInt(operBound);
 
-        int temp1 = rndm.nextInt(rndmBound) + 2;
-        int temp2 = rndm.nextInt(rndmBound) + 2;
+            int oper = rndm.nextInt(operBound);
+            int temp1 = rndm.nextInt(rndmBound) + 2;
+            int temp2 = rndm.nextInt(rndmBound) + 2;
 
-        Engine calc = new Engine(Calc.rule,
-                getQuestion(temp1, temp2, oper),
-                getRightAnswer(temp1,temp2,oper));
-        calc.playThisGame();
+            Engine calc = new Engine(Calc.rule,
+                    getQuestion(temp1, temp2, oper),
+                    getRightAnswer(temp1, temp2, oper));
+            calc.playThisGame();
 
 
     }
