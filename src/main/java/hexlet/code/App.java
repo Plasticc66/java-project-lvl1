@@ -7,6 +7,8 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.newEngine.Cli;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
         final int greetNum = 1;
@@ -26,7 +28,9 @@ public class App {
                 + "\n6 - Prime"
                 + "\n0 - Exit");
         System.out.print("your choice: ");
-        switch (EnterGame.choiceGame()) {
+        Scanner scanner = new Scanner(System.in);
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
             case greetNum:
                 Cli.greeting();
                 break;
