@@ -10,6 +10,32 @@ public class Calc {
     public static String question;
     public static int rightAnswer;
 
+    //main game-method
+    public static void playCalc() {
+
+        Cli.greeting();
+        String name = Cli.name;
+
+        final int rndmBound = 18;
+        final int operBound = 3;
+        Random rndm = new Random();
+
+        System.out.println(rule);
+        for (int winStreak = 0; winStreak < Engine.winForEnd; winStreak++) {
+            if (Engine.lose == false) {
+                int oper = rndm.nextInt(operBound);
+                int temp1 = rndm.nextInt(rndmBound) + 2;
+                int temp2 = rndm.nextInt(rndmBound) + 2;
+                Engine calc = new Engine(
+                        getQuestion(temp1, temp2, oper),
+                        getRightAnswer(temp1, temp2, oper));
+                calc.playThisGame(name);
+                question = null;
+            }
+        }
+    }
+
+    //generate question
     public static String getQuestion(int temp1, int temp2, int oper) {
         question = "\nQuestion: ";
 
@@ -29,6 +55,7 @@ public class Calc {
 
     }
 
+    //calculate right answer
     public static int getRightAnswer(int temp1, int temp2, int oper) {
 
         switch (oper) {
@@ -48,25 +75,4 @@ public class Calc {
 
     }
 
-    public static void playCalc() {
-        Cli.greeting();
-        String name = Cli.name;
-        final int winForEnd = 3;
-        final int rndmBound = 18;
-        final int operBound = 3;
-        Random rndm = new Random();
-        System.out.println(rule);
-        for (int winStreak = 0; winStreak < winForEnd; winStreak++) {
-            if (Engine.lose == false) {
-                int oper = rndm.nextInt(operBound);
-                int temp1 = rndm.nextInt(rndmBound) + 2;
-                int temp2 = rndm.nextInt(rndmBound) + 2;
-                Engine calc = new Engine(
-                        getQuestion(temp1, temp2, oper),
-                        getRightAnswer(temp1, temp2, oper));
-                calc.playThisGame(name);
-                question = null;
-            }
-        }
-    }
 }

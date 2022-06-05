@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+
+    public static int winForEnd = 3;
     public static String question;
     public static int rightAnswer;
     public static int winstreak = 0;

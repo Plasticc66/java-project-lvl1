@@ -27,31 +27,29 @@ public class App {
                 + "\n5 - Progression"
                 + "\n6 - Prime"
                 + "\n0 - Exit");
+
         System.out.print("your choice: ");
         Scanner scanner = new Scanner(System.in);
         int choice = Integer.parseInt(scanner.nextLine());
+
         switch (choice) {
             case greetNum:
                 Cli.greeting();
                 break;
             case evenNum:
-                Even even = new Even();
-               // even.playThisGame("Answer 'yes' if number is even, otherwise answer 'no'.");
+               // Even.playEven();
                 break;
             case calcNum:
                 Calc.playCalc();
                 break;
             case gdcNum:
-                GDC gdc = new GDC();
-               // gdc.playThisGame("Find the greatest common divisor of given numbers.");
+               // GDC.playGDC("Find the greatest common divisor of given numbers.");
                 break;
             case progressionNum:
-                Progression progression = new Progression();
-               // progression.playThisGame("What number is missing in the progression?");
+               // Progression.playProgression("What number is missing in the progression?");
                 break;
             case primeNum:
-                Prime prime = new Prime();
-               // prime.playThisGame("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+               // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 break;
             case exitNum:
                 System.out.println("Goodbye, have a nice day!");
