@@ -1,11 +1,11 @@
-package hexlet.code.games;
+package hexlet.code.updGames;
 
 import hexlet.code.Engine;
 
 import java.util.Random;
 
 public class Calc {
-
+    //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
     public static String rule = "What is the result of the expression?";
     public static String question;
     public static int rightAnswer;
@@ -49,6 +49,8 @@ public class Calc {
     }
 
     public static void playCalc() {
+        Cli.greeting();
+        String name = Cli.name;
         final int winForEnd = 3;
         final int rndmBound = 18;
         final int operBound = 3;
@@ -62,12 +64,9 @@ public class Calc {
                 Engine calc = new Engine(
                         getQuestion(temp1, temp2, oper),
                         getRightAnswer(temp1, temp2, oper));
-                calc.playThisGame();
+                calc.playThisGame(name);
                 question = null;
             }
         }
     }
 }
-
-
-

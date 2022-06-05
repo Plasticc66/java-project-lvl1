@@ -1,8 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -16,12 +13,7 @@ public class Engine {
         this.rightAnswer = rightAnswer;
     }
 
-    public static void playThisGame() {
-        //GREET + NAME
-
-        String name = "mc borow";
-
-        //DECLARATION OF VARIABLES
+    public static void playThisGame(String name) {
         Scanner scanner = new Scanner(System.in);
 
         //WIN-LOSE LOGIC
