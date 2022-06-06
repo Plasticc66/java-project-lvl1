@@ -21,14 +21,18 @@ public class Calc {
         Random rndm = new Random();
 
         System.out.println(rule);
+
         for (int winStreak = 0; winStreak < Engine.winForEnd; winStreak++) {
             if (Engine.lose == false) {
+
                 int oper = rndm.nextInt(operBound);
                 int temp1 = rndm.nextInt(rndmBound) + 2;
                 int temp2 = rndm.nextInt(rndmBound) + 2;
+
                 Engine calc = new Engine(
-                        getQuestion(temp1, temp2, oper),
-                        getRightAnswer(temp1, temp2, oper));
+                        getRightAnswer(temp1, temp2, oper),
+                        getQuestion(temp1, temp2, oper));
+
                 calc.playThisGame(name);
                 question = null;
             }

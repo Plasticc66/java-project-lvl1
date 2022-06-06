@@ -1,4 +1,4 @@
-package hexlet.code.games;
+package hexlet.code.updGames;
 
 import hexlet.code.Engine;
 import hexlet.code.updGames.Cli;
@@ -22,23 +22,25 @@ public class Even {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.winForEnd; winStreak++) {
-            if(Engine.lose == false){
+            if (Engine.lose == false) {
 
                 int temp = rndm.nextInt(rndmBound);
                 Engine even = new Engine(
-                        getQuestion(temp), getRightAnswer(temp));
+                        getRightAnswer(temp),
+                        getQuestion(temp));
+                even.playThisGame(name, "StringType");
                 question = null;
             }
         }
 
     }
 
-    public static String getQuestion(int temp){
+    public static String getQuestion(int temp) {
         question = "\nQuestion: " + temp;
         return question;
     }
 
-    public static String  getRightAnswer(int temp) {
+    public static String getRightAnswer(int temp) {
         if (temp % 2 == 0) {
             rightAnswer = "yes";
         } else {
@@ -47,18 +49,4 @@ public class Even {
         return rightAnswer;
     }
 
-   /* public final String condition() {
-        String rightAnswerInside = null;
-        Random rndm = new Random();
-        final int rndmBound = 20;
-        int num = rndm.nextInt(rndmBound);
-
-        System.out.println("\nQuestion: " + num);
-        if (num % 2 == 0) {
-            rightAnswerInside = "yes";
-        } else {
-            rightAnswerInside = "no";
-        }
-        return rightAnswerInside;
-    }*/
 }

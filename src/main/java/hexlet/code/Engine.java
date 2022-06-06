@@ -7,18 +7,25 @@ public class Engine {
     public static int winForEnd = 3;
     public static String question;
     public static int rightAnswer;
+    public static String rightAnswerString;
     public static int winstreak = 0;
     public static boolean lose = false;
 
-    public Engine(String question, int rightAnswer) {
+    public Engine(int rightAnswer, String question) {
         this.question = question;
         this.rightAnswer = rightAnswer;
     }
 
+    public Engine(String rightAnswerString, String question) {
+        this.question = question;
+        this.rightAnswerString = rightAnswerString;
+    }
+
+    //WIN-LOSE LOGIC
     public static void playThisGame(String name) {
+
         Scanner scanner = new Scanner(System.in);
 
-        //WIN-LOSE LOGIC
         System.out.println(question);
         System.out.print("Your answer: ");
         int playerAnswer = scanner.nextInt();
@@ -31,6 +38,30 @@ public class Engine {
                     + "'.\nLet's try again, " + name + "!");
             lose = true;
         }
+
+        if (winstreak == 3) {
+            System.out.println("Congratulations, " + name + "!");
+        }
+    }
+
+    //overwrite lvl jun
+    public static void playThisGame(String name, String type) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(question);
+        System.out.print("Your answer: ");
+        String playerAnswer = scanner.nextLine();
+
+        if (playerAnswer.equals(rightAnswerString)) {
+            System.out.println("Correct!");
+            winstreak++;
+        } else {
+            System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswerString
+                    + "'.\nLet's try again, " + name + "!");
+            lose = true;
+        }
+
         if (winstreak == 3) {
             System.out.println("Congratulations, " + name + "!");
         }

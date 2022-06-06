@@ -1,10 +1,8 @@
 package hexlet.code;
 
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
 import hexlet.code.games.GDC;
 import hexlet.code.updGames.Calc;
-import hexlet.code.games.Even;
+import hexlet.code.updGames.Even;
 import hexlet.code.updGames.Cli;
 
 import java.util.Scanner;
@@ -37,19 +35,19 @@ public class App {
                 Cli.greeting();
                 break;
             case evenNum:
-               // Even.playEven();
+                Even.playEven();
                 break;
             case calcNum:
                 Calc.playCalc();
                 break;
             case gdcNum:
-               // GDC.playGDC("Find the greatest common divisor of given numbers.");
+                GDC.playGDC();
                 break;
             case progressionNum:
-               // Progression.playProgression("What number is missing in the progression?");
+                // Progression.playProgression("What number is missing in the progression?");
                 break;
             case primeNum:
-               // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 break;
             case exitNum:
                 System.out.println("Goodbye, have a nice day!");
