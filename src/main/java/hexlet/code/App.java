@@ -1,9 +1,8 @@
 package hexlet.code;
 
-import hexlet.code.games.GDC;
 import hexlet.code.updGames.Calc;
 import hexlet.code.updGames.Even;
-import hexlet.code.updGames.Cli;
+import hexlet.code.updGames.GCD;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,8 +18,8 @@ public class App {
         choices.add(evenNum);
         final int calcNum = 3;
         choices.add(calcNum);
-        final int gdcNum = 4;
-        choices.add(gdcNum);
+        final int gcdNum = 4;
+        choices.add(gcdNum);
         final int progressionNum = 5;
         choices.add(progressionNum);
         final int primeNum = 6;
@@ -34,7 +33,7 @@ public class App {
                 + "\n1 - Greet"
                 + "\n2 - Even"
                 + "\n3 - Calc"
-                + "\n4 - GDC"
+                + "\n4 - GCD"
                 + "\n5 - Progression"
                 + "\n6 - Prime"
                 + "\n0 - Exit");
@@ -74,8 +73,8 @@ public class App {
                     case calcNum:
                         Calc.playCalc();
                         break;
-                    case gdcNum:
-                        GDC.playGDC();
+                    case gcdNum:
+                        GCD.playGCD();
                         break;
                     case progressionNum:
                         // Progression.playProgression("What number is missing in the progression?");
@@ -89,6 +88,5 @@ public class App {
                 }
             }
         }
-
     }
 }

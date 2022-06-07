@@ -1,7 +1,6 @@
 package hexlet.code.updGames;
 
 import hexlet.code.Engine;
-import hexlet.code.updGames.Cli;
 
 import java.util.Random;
 

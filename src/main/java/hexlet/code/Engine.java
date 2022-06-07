@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.updGames.Cli;
-
 import java.util.Scanner;
 
 public class Engine {
