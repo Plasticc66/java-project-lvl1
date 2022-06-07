@@ -6,10 +6,15 @@ import java.util.Random;
 
 public class Calc {
     //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
+    //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно
+
     public static String rule = "What is the result of the expression?";
     public static String question;
     public static int rightAnswer;
 
+    static int oper;
+    static int temp1;
+    static int temp2;
     //main game-method
     public static void playCalc() {
 
@@ -22,13 +27,13 @@ public class Calc {
         for (int winStreak = 0; winStreak < Engine.winForEnd; winStreak++) {
             if (Engine.lose == false) {
 
-                int oper = rndm.nextInt(operBound);
-                int temp1 = rndm.nextInt(rndmBound) + 2;
-                int temp2 = rndm.nextInt(rndmBound) + 2;
+                oper = rndm.nextInt(operBound);
+                temp1 = rndm.nextInt(rndmBound) + 2;
+                temp2 = rndm.nextInt(rndmBound) + 2;
 
                 Engine calc = new Engine(
-                        getRightAnswer(temp1, temp2, oper),
-                        getQuestion(temp1, temp2, oper));
+                        getRightAnswer(),
+                        getQuestion());
 
                 calc.playThisGame();
                 question = null;
@@ -37,7 +42,7 @@ public class Calc {
     }
 
     //generate question
-    public static String getQuestion(int temp1, int temp2, int oper) {
+    public static String getQuestion() {
         question = "\nQuestion: ";
 
         switch (oper) {
@@ -57,7 +62,7 @@ public class Calc {
     }
 
     //calculate right answer
-    public static int getRightAnswer(int temp1, int temp2, int oper) {
+    public static int getRightAnswer() {
 
         switch (oper) {
             case 0:

@@ -9,22 +9,23 @@ public class Even {
     public static String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
     public static String question;
     public static String rightAnswer;
+    static int temp;
 
     public static void playEven() {
 
 
-        Random rndm = new Random();
-        final int rndmBound = 20;
+        Random random = new Random();
+        final int randomBound = 20;
 
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.winForEnd; winStreak++) {
             if (Engine.lose == false) {
 
-                int temp = rndm.nextInt(rndmBound);
+                temp = random.nextInt(randomBound);
                 Engine even = new Engine(
-                        getRightAnswer(temp),
-                        getQuestion(temp));
+                        getRightAnswer(),
+                        getQuestion());
                 even.playThisGame("StringType");
                 question = null;
             }
@@ -32,12 +33,12 @@ public class Even {
 
     }
 
-    public static String getQuestion(int temp) {
+    public static String getQuestion() {
         question = "\nQuestion: " + temp;
         return question;
     }
 
-    public static String getRightAnswer(int temp) {
+    public static String getRightAnswer() {
         if (temp % 2 == 0) {
             rightAnswer = "yes";
         } else {

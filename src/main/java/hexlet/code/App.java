@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.updGames.Calc;
 import hexlet.code.updGames.Even;
 import hexlet.code.updGames.GCD;
+import hexlet.code.updGames.Progression;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -77,7 +78,7 @@ public class App {
                         GCD.playGCD();
                         break;
                     case progressionNum:
-                        // Progression.playProgression("What number is missing in the progression?");
+                        Progression.playProgression();
                         break;
                     case primeNum:
                         // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");

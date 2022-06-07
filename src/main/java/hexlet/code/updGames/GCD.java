@@ -11,10 +11,11 @@ public class GCD {
     public static String question;
     public static int rightAnswer = 1;
 
+    static int temp1;
+    static int temp2;
+
     public static void playGCD() {
         Random random = new Random();
-        int temp1 = 0;
-        int temp2 = 0;
         int randomBound = 98;
 
         System.out.println(rule);
@@ -27,12 +28,12 @@ public class GCD {
                         temp2 = random.nextInt(randomBound) + 2;
                     }
                     while (temp1 == temp2);
-                    getRightAnswer(temp1, temp2);
+                    getRightAnswer();
                 }
 
                 Engine gcd = new Engine(
-                        getRightAnswer(temp1, temp2),
-                        getQuestion(temp1, temp2));
+                        getRightAnswer(),
+                        getQuestion());
 
                 gcd.playThisGame();
                 question = null;
@@ -42,7 +43,7 @@ public class GCD {
         }
     }
 
-    public static int getRightAnswer(int temp1, int temp2) {
+    public static int getRightAnswer() {
         ArrayList<Integer> divTemp1 = new ArrayList<>();
         ArrayList<Integer> divTemp2 = new ArrayList<>();
 
@@ -79,7 +80,7 @@ public class GCD {
         return rightAnswer;
     }
 
-    public static String getQuestion(int temp1, int temp2) {
+    public static String getQuestion() {
         question = "\nQuestion: " + temp1 + " " + temp2;
         return question;
     }
