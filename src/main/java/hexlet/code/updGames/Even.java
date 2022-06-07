@@ -13,8 +13,6 @@ public class Even {
 
     public static void playEven() {
 
-        Cli.greeting();
-        String name = Cli.name;
 
         Random rndm = new Random();
         final int rndmBound = 20;
@@ -28,7 +26,7 @@ public class Even {
                 Engine even = new Engine(
                         getRightAnswer(temp),
                         getQuestion(temp));
-                even.playThisGame(name, "StringType");
+                even.playThisGame("StringType");
                 question = null;
             }
         }

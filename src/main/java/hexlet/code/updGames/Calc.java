@@ -13,9 +13,6 @@ public class Calc {
     //main game-method
     public static void playCalc() {
 
-        Cli.greeting();
-        String name = Cli.name;
-
         final int rndmBound = 18;
         final int operBound = 3;
         Random rndm = new Random();
@@ -33,7 +30,7 @@ public class Calc {
                         getRightAnswer(temp1, temp2, oper),
                         getQuestion(temp1, temp2, oper));
 
-                calc.playThisGame(name);
+                calc.playThisGame();
                 question = null;
             }
         }

@@ -5,17 +5,30 @@ import hexlet.code.updGames.Calc;
 import hexlet.code.updGames.Even;
 import hexlet.code.updGames.Cli;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+
+        ArrayList<Integer> choices = new ArrayList<>();
+
         final int greetNum = 1;
+        choices.add(greetNum);
         final int evenNum = 2;
+        choices.add(evenNum);
         final int calcNum = 3;
+        choices.add(calcNum);
         final int gdcNum = 4;
+        choices.add(gdcNum);
         final int progressionNum = 5;
+        choices.add(progressionNum);
         final int primeNum = 6;
+        choices.add(primeNum);
         final int exitNum = 0;
+        choices.add(exitNum);
+
+        boolean correctData = false;
 
         System.out.println("\nPlease enter the game number and press Enter."
                 + "\n1 - Greet"
@@ -30,30 +43,51 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int choice = Integer.parseInt(scanner.nextLine());
 
-        switch (choice) {
-            case greetNum:
-                Cli.greeting();
+        //correct data?
+
+        for (int i = 0; i < choices.size(); i++) {
+            if (choice == choices.get(i)) {
+                correctData = true;
                 break;
-            case evenNum:
-                Even.playEven();
-                break;
-            case calcNum:
-                Calc.playCalc();
-                break;
-            case gdcNum:
-                GDC.playGDC();
-                break;
-            case progressionNum:
-                // Progression.playProgression("What number is missing in the progression?");
-                break;
-            case primeNum:
-                // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                break;
-            case exitNum:
+            }
+        }
+        if (!correctData) {
+            System.out.println("wrong data T_T");
+        } else {
+
+            //it exit?
+
+            if (choice == exitNum) {
                 System.out.println("Goodbye, have a nice day!");
-                break;
-            default:
-                System.out.println("wrong data T_T");
+            } else {
+
+                //it ok, greet and play
+
+                Cli.greeting();
+
+                switch (choice) {
+                    case greetNum:
+                        break;
+                    case evenNum:
+                        Even.playEven();
+                        break;
+                    case calcNum:
+                        Calc.playCalc();
+                        break;
+                    case gdcNum:
+                        GDC.playGDC();
+                        break;
+                    case progressionNum:
+                        // Progression.playProgression("What number is missing in the progression?");
+                        break;
+                    case primeNum:
+                        // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                        break;
+
+                    default:
+                        throw new Error("Unknown value: " + choice);
+                }
+            }
         }
 
     }

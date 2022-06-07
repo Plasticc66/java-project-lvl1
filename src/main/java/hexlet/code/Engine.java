@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.updGames.Cli;
+
 import java.util.Scanner;
 
 public class Engine {
@@ -22,7 +24,7 @@ public class Engine {
     }
 
     //WIN-LOSE LOGIC
-    public static void playThisGame(String name) {
+    public static void playThisGame() {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -35,17 +37,17 @@ public class Engine {
             winstreak++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                    + "'.\nLet's try again, " + name + "!");
+                    + "'.\nLet's try again, " + Cli.name + "!");
             lose = true;
         }
 
         if (winstreak == 3) {
-            System.out.println("Congratulations, " + name + "!");
+            System.out.println("Congratulations, " + Cli.name + "!");
         }
     }
 
     //overwrite lvl jun
-    public static void playThisGame(String name, String type) {
+    public static void playThisGame(String type) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -58,12 +60,12 @@ public class Engine {
             winstreak++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswerString
-                    + "'.\nLet's try again, " + name + "!");
+                    + "'.\nLet's try again, " + Cli.name + "!");
             lose = true;
         }
 
         if (winstreak == 3) {
-            System.out.println("Congratulations, " + name + "!");
+            System.out.println("Congratulations, " + Cli.name + "!");
         }
     }
 

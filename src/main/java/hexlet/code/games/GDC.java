@@ -12,6 +12,9 @@ public class GDC {
     public static String question;
     public static int rightAnswer = 1;
 
+    static ArrayList<Integer> divTemp1 = new ArrayList<>();
+    static ArrayList<Integer> divTemp2 = new ArrayList<>();
+
     public static void playGDC() {
 
         Cli.greeting();
@@ -31,7 +34,7 @@ public class GDC {
                     temp2 = rndm.nextInt(rndmBound) + 2;
                     getRightAnswer(temp1, temp2);
                 }
-                while (rightAnswer == 1);
+                while (rightAnswer == 1 && divTemp1.size() < 2 && divTemp2.size() < 2);
 
                 Engine gbc = new Engine(
                         getRightAnswer(temp1, temp2),
@@ -50,25 +53,28 @@ public class GDC {
     }
 
     public static int getRightAnswer(int temp1, int temp2) {
-
-        ArrayList<Integer> divTemp1 = new ArrayList<>();
-        ArrayList<Integer> divTemp2 = new ArrayList<>();
+        int k = 0;
+        int l = 0;
 
         //get all divisors > 1
         for (int i = 2; i < Math.abs(temp1) + 1; i++) {
             if (temp1 % i == 0) {
-                divTemp1.add(i);
+                divTemp1.add(k);
+                k++;
             }
         }
+
         for (int i = 2; i < Math.abs(temp2) + 1; i++) {
             if (temp2 % i == 0) {
-                divTemp2.add(i);
+                divTemp2.add(l);
+                l++;
             }
         }
 
         //greatest coincide
-        for (int i = divTemp1.size() - 1; i >= 0; i--) {
-            for (int j = divTemp2.size() - 1; j >= 0; j--) {
+        for (
+                int i = divTemp1.size() - 1; i >= 2; i--) {
+            for (int j = divTemp2.size() - 1; j >= 2; j--) {
                 if (divTemp2.get(j).equals(divTemp1.get(i))) {
                     rightAnswer = divTemp1.get(i);
                     break;
