@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.updGames.Calc;
-import hexlet.code.updGames.Even;
-import hexlet.code.updGames.GCD;
-import hexlet.code.updGames.Progression;
+import hexlet.code.games.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -74,14 +71,14 @@ public class App {
                     case calcNum:
                         Calc.playCalc();
                         break;
-                    case gcdNum:
+                    case gcdNum://BUG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         GCD.playGCD();
                         break;
                     case progressionNum:
                         Progression.playProgression();
                         break;
                     case primeNum:
-                        // Prime.playPrime("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                        Prime.playPrime();
                         break;
 
                     default:

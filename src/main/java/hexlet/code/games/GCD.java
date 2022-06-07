@@ -1,4 +1,4 @@
-package hexlet.code.updGames;
+package hexlet.code.games;
 
 import hexlet.code.Engine;
 
@@ -36,7 +36,6 @@ public class GCD {
                         getQuestion());
 
                 gcd.playThisGame();
-                question = null;
                 rightAnswer = 1;
 
             }

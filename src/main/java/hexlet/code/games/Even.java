@@ -1,4 +1,4 @@
-package hexlet.code.updGames;
+package hexlet.code.games;
 
 import hexlet.code.Engine;
 
@@ -27,7 +27,6 @@ public class Even {
                         getRightAnswer(),
                         getQuestion());
                 even.playThisGame("StringType");
-                question = null;
             }
         }
 

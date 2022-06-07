@@ -1,4 +1,4 @@
-package hexlet.code.updGames;
+package hexlet.code.games;
 
 import hexlet.code.Engine;
 
@@ -15,6 +15,7 @@ public class Calc {
     static int oper;
     static int temp1;
     static int temp2;
+
     //main game-method
     public static void playCalc() {
 
@@ -36,7 +37,6 @@ public class Calc {
                         getQuestion());
 
                 calc.playThisGame();
-                question = null;
             }
         }
     }
