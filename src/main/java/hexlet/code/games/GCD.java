@@ -26,7 +26,6 @@ public class GCD {
                     do {
                         temp1 = random.nextInt(randomBound) + 2;
                         temp2 = random.nextInt(randomBound) + 2;
-                        System.out.println(temp1 + "  " + temp2);
                     }
                     while (temp1 == temp2);
                     getRightAnswer();
@@ -93,6 +92,3 @@ public class GCD {
     }
 
 }
-
-//99 4
-

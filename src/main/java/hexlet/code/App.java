@@ -71,7 +71,7 @@ public class App {
                     case calcNum:
                         Calc.playCalc();
                         break;
-                    case gcdNum://BUG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    case gcdNum:
                         GCD.playGCD();
                         break;
                     case progressionNum:
