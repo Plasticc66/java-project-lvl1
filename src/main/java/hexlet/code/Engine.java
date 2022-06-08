@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static int winForEnd = 3;
+    private static int winForEnd = 3;
+
+    public static int getWinForEnd() {
+        return winForEnd;
+    }
+
     public static String question;
     public static int rightAnswer;
     public static String rightAnswerString;
@@ -35,12 +40,12 @@ public class Engine {
             winstreak++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                    + "'.\nLet's try again, " + Cli.name + "!");
+                    + "'.\nLet's try again, " + Cli.getName() + "!");
             lose = true;
         }
 
         if (winstreak == 3) {
-            System.out.println("Congratulations, " + Cli.name + "!");
+            System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
 
@@ -58,12 +63,12 @@ public class Engine {
             winstreak++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswerString
-                    + "'.\nLet's try again, " + Cli.name + "!");
+                    + "'.\nLet's try again, " + Cli.getName() + "!");
             lose = true;
         }
 
         if (winstreak == 3) {
-            System.out.println("Congratulations, " + Cli.name + "!");
+            System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
 

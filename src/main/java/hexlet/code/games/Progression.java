@@ -22,7 +22,7 @@ public class Progression {
 
         System.out.println(rule);
 
-        for (int winStreak = 0; winStreak < Engine.winForEnd; winStreak++) {
+        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
             if (Engine.lose == false) {
 
                 int step = random.nextInt(stepBound) + 1;
