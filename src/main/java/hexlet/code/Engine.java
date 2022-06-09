@@ -5,15 +5,32 @@ import java.util.Scanner;
 public class Engine {
 
     private static int winForEnd = 3;
-
     public static int getWinForEnd() {
         return winForEnd;
     }
 
-    public static String question;
-    public static int rightAnswer;
-    public static String rightAnswerString;
-    public static int winstreak = 0;
+    private static String question;
+    public static String getQuestion() {
+        return question;
+    }
+
+    private static int rightAnswer;
+    /*public static int getRightAnswer() {
+        return rightAnswer;
+    }*/
+
+    //оставил чтобы посмотреть что на это скажет линтер
+    //скажет что нужен метод для доступа? или наоборот будет ругать другие методы за юзлес
+
+    private static String rightAnswerString;
+    public static String getRightAnswerString() {
+        return getRightAnswerString();
+    }
+
+    private static int winstreakForCongrats = 0;
+    public static int getWinstreakForCongrats(){
+        return winstreakForCongrats;
+    }
     public static boolean lose = false;
 
     public Engine(int rightAnswer, String question) {
@@ -37,14 +54,14 @@ public class Engine {
 
         if (playerAnswer == rightAnswer) {
             System.out.println("Correct!");
-            winstreak++;
+            winstreakForCongrats++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
                     + "'.\nLet's try again, " + Cli.getName() + "!");
             lose = true;
         }
 
-        if (winstreak == 3) {
+        if (winstreakForCongrats == 3) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
@@ -60,14 +77,14 @@ public class Engine {
 
         if (playerAnswer.equals(rightAnswerString)) {
             System.out.println("Correct!");
-            winstreak++;
+            winstreakForCongrats++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswerString
                     + "'.\nLet's try again, " + Cli.getName() + "!");
             lose = true;
         }
 
-        if (winstreak == 3) {
+        if (winstreakForCongrats == winForEnd) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
