@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static int winForEnd = 3;
+    final static int winForEnd = 3;
 
     public static int getWinForEnd() {
         return winForEnd;
@@ -17,12 +17,9 @@ public class Engine {
     }
 
     private static int rightAnswer;
-    /*public static int getRightAnswer() {
+    public static int getRightAnswer() {
         return rightAnswer;
-    }*/
-
-    //оставил чтобы посмотреть что на это скажет линтер
-    //скажет что нужен метод для доступа? или наоборот будет ругать другие методы за юзлес
+    }
 
     private static String rightAnswerString;
 

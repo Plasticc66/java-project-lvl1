@@ -12,9 +12,9 @@ public class Calc {
     private static String question;
     private static int rightAnswer;
 
-    static int oper;
-    static int temp1;
-    static int temp2;
+    private static int oper;
+    private static int temp1;
+    private static int temp2;
 
     //main game-method
     public static void playCalc() {

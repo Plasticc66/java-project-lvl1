@@ -10,9 +10,9 @@ public class Prime {
     private static String question;
     private static String rightAnswer;
 
-    static Random random = new Random();
+    private static Random random = new Random();
     static final int randomBound = 98;
-    static int temp;
+    private static int temp;
 
     public static void playPrime() {
 

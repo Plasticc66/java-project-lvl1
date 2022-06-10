@@ -11,12 +11,12 @@ public class GCD {
     private static String question;
     private static int rightAnswer = 1;
 
-    static int temp1;
-    static int temp2;
+    private static int temp1;
+    private static int temp2;
 
     public static void playGCD() {
         Random random = new Random();
-        int randomBound = 98;
+        final int randomBound = 98;
 
         System.out.println(rule);
 

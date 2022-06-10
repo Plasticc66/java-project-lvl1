@@ -11,9 +11,9 @@ public class Progression {
     private static int rightAnswer;
 
 
-    static Random random = new Random();
+    private static Random random = new Random();
     static final int lengthArray = 10;
-    static String[] progressionLine = new String[lengthArray];
+    private static String[] progressionLine = new String[lengthArray];
 
     public static void playProgression() {
 

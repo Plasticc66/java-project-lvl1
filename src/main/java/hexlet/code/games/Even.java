@@ -9,7 +9,7 @@ public class Even {
     private static String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
     private static String question;
     private static String rightAnswer;
-    static int temp;
+    private static int temp;
 
     public static void playEven() {
 
