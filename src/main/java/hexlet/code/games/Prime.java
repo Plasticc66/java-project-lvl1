@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class Prime {
 
-    public static String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static String question;
-    public static String rightAnswer;
+    private static String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static String question;
+    private static String rightAnswer;
 
     static Random random = new Random();
     static final int randomBound = 98;
@@ -19,7 +19,7 @@ public class Prime {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.lose == false) {
+            if (Engine.itLose() == false) {
 
                 temp = random.nextInt(randomBound) + 2;
 

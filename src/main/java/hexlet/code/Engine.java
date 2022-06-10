@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class Engine {
 
     private static int winForEnd = 3;
+
     public static int getWinForEnd() {
         return winForEnd;
     }
 
     private static String question;
+
     public static String getQuestion() {
         return question;
     }
@@ -23,15 +25,22 @@ public class Engine {
     //скажет что нужен метод для доступа? или наоборот будет ругать другие методы за юзлес
 
     private static String rightAnswerString;
+
     public static String getRightAnswerString() {
         return getRightAnswerString();
     }
 
     private static int winstreakForCongrats = 0;
-    public static int getWinstreakForCongrats(){
+
+    public static int getWinstreakForCongrats() {
         return winstreakForCongrats;
     }
-    public static boolean lose = false;
+
+    private static boolean lose = false;
+
+    public static boolean itLose() {
+        return lose;
+    }
 
     public Engine(int rightAnswer, String question) {
         this.question = question;
@@ -61,7 +70,7 @@ public class Engine {
             lose = true;
         }
 
-        if (winstreakForCongrats == 3) {
+        if (winstreakForCongrats == winForEnd) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }

@@ -8,9 +8,9 @@ public class Calc {
     //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
     //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно
 
-    public static String rule = "What is the result of the expression?";
-    public static String question;
-    public static int rightAnswer;
+    private static String rule = "What is the result of the expression?";
+    private static String question;
+    private static int rightAnswer;
 
     static int oper;
     static int temp1;
@@ -26,7 +26,7 @@ public class Calc {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.lose == false) {
+            if (Engine.itLose() == false) {
 
                 oper = rndm.nextInt(operBound);
                 temp1 = rndm.nextInt(rndmBound) + 2;

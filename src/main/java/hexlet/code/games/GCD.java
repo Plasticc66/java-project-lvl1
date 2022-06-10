@@ -7,9 +7,9 @@ import java.util.Random;
 
 public class GCD {
 
-    public static String rule = "Find the greatest common divisor of given numbers.";
-    public static String question;
-    public static int rightAnswer = 1;
+    private static String rule = "Find the greatest common divisor of given numbers.";
+    private static String question;
+    private static int rightAnswer = 1;
 
     static int temp1;
     static int temp2;
@@ -21,7 +21,7 @@ public class GCD {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.lose == false) {
+            if (Engine.itLose() == false) {
                 while (rightAnswer == 1) {
                     do {
                         temp1 = random.nextInt(randomBound) + 2;

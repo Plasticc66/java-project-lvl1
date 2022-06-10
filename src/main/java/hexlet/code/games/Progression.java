@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class Progression {
 
-    public static String rule = "What number is missing in the progression?";
-    public static String question;
-    public static int rightAnswer;
+    private static String rule = "What number is missing in the progression?";
+    private static String question;
+    private static int rightAnswer;
 
 
     static Random random = new Random();
@@ -23,7 +23,7 @@ public class Progression {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.lose == false) {
+            if (Engine.itLose() == false) {
 
                 int step = random.nextInt(stepBound) + 1;
                 int firstNum = random.nextInt(randomBound);

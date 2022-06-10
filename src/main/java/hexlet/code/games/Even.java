@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class Even {
 
-    public static String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
-    public static String question;
-    public static String rightAnswer;
+    private static String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
+    private static String question;
+    private static String rightAnswer;
     static int temp;
 
     public static void playEven() {
@@ -20,7 +20,7 @@ public class Even {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.lose == false) {
+            if (Engine.itLose() == false) {
 
                 temp = random.nextInt(randomBound);
                 Engine even = new Engine(
