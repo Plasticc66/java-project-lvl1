@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Engine {
 
-    final static int winForEnd = 3;
+    static final int WinForEnd = 3;
 
     public static int getWinForEnd() {
-        return winForEnd;
+        return WinForEnd;
     }
 
     private static String question;
@@ -67,7 +67,7 @@ public class Engine {
             lose = true;
         }
 
-        if (winstreakForCongrats == winForEnd) {
+        if (winstreakForCongrats == WinForEnd) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
@@ -90,7 +90,7 @@ public class Engine {
             lose = true;
         }
 
-        if (winstreakForCongrats == winForEnd) {
+        if (winstreakForCongrats == WinForEnd) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }

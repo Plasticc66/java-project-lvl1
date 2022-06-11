@@ -12,8 +12,8 @@ public class Progression {
 
 
     private static Random random = new Random();
-    static final int lengthArray = 10;
-    private static String[] progressionLine = new String[lengthArray];
+    static final int LengthArray = 10;
+    private static String[] progressionLine = new String[LengthArray];
 
     public static void playProgression() {
 
@@ -23,7 +23,7 @@ public class Progression {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.itLose() == false) {
+            if (!Engine.itLose()) {
 
                 int step = random.nextInt(stepBound) + 1;
                 int firstNum = random.nextInt(randomBound);

@@ -26,7 +26,7 @@ public class Calc {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.itLose() == false) {
+            if (!Engine.itLose()) {
 
                 oper = rndm.nextInt(operBound);
                 temp1 = rndm.nextInt(rndmBound) + 2;

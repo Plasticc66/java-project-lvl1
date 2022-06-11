@@ -21,7 +21,7 @@ public class GCD {
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (Engine.itLose() == false) {
+            if (!Engine.itLose()) {
                 while (rightAnswer == 1) {
                     do {
                         temp1 = random.nextInt(randomBound) + 2;
