@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Engine {
 
-    static final int WinForEnd = 3;
+    static final int WIN_FOR_END = 3;
 
     public static int getWinForEnd() {
-        return WinForEnd;
+        return WIN_FOR_END;
     }
 
     private static String question;
@@ -40,13 +40,13 @@ public class Engine {
     }
 
     public Engine(int rightAnswer, String question) {
-        this.question = question;
-        this.rightAnswer = rightAnswer;
+       /* this.question = question;
+        this.rightAnswer = rightAnswer;*/
     }
 
     public Engine(String rightAnswerString, String question) {
-        this.question = question;
-        this.rightAnswerString = rightAnswerString;
+        /*this.question = question;
+        this.rightAnswerString = rightAnswerString;*/
     }
 
     //WIN-LOSE LOGIC
@@ -67,7 +67,7 @@ public class Engine {
             lose = true;
         }
 
-        if (winstreakForCongrats == WinForEnd) {
+        if (winstreakForCongrats == WIN_FOR_END) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
@@ -90,7 +90,7 @@ public class Engine {
             lose = true;
         }
 
-        if (winstreakForCongrats == WinForEnd) {
+        if (winstreakForCongrats == WIN_FOR_END) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
