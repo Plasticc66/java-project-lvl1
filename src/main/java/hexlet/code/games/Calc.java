@@ -4,36 +4,79 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class Calc extends Engine {
-    public final String getRule() {
-        String rule = "\nWhat is the result of the expression?";
-        return rule;
-    }
+public class Calc {
+    //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
+    //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно
 
-    public final String condition() {
-        Random rndm = new Random();
+    private static String rule = "What is the result of the expression?";
+    private static String question;
+    private static int rightAnswer;
+
+    private static int oper;
+    private static int temp1;
+    private static int temp2;
+
+    //main game-method
+    public static void playCalc() {
+
         final int rndmBound = 18;
         final int operBound = 3;
-        int oper = rndm.nextInt(operBound);
+        Random rndm = new Random();
 
-        int temp1 = rndm.nextInt(rndmBound) + 2;
-        int temp2 = rndm.nextInt(rndmBound) + 2;
+        System.out.println(rule);
+
+        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
+            if (!Engine.itLose()) {
+
+                oper = rndm.nextInt(operBound);
+                temp1 = rndm.nextInt(rndmBound) + 2;
+                temp2 = rndm.nextInt(rndmBound) + 2;
+
+                Engine calc = new Engine(
+                        getRightAnswer(),
+                        getQuestion());
+
+                calc.playThisGame();
+            }
+        }
+    }
+
+    //generate question
+    public static String getQuestion() {
+        question = "\nQuestion: ";
 
         switch (oper) {
             case 0:
-                System.out.println("\nQuestion: " + temp1 + " + " + temp2);
-                int rightAnswerInside = temp1 + temp2;
-                return Integer.toString(rightAnswerInside);
-
+                question += temp1 + " + " + temp2;
+                return question;
             case 1:
-                System.out.println("\nQuestion: " + temp1 + " - " + temp2);
-                rightAnswerInside = temp1 - temp2;
-                return Integer.toString(rightAnswerInside);
-
+                question += temp1 + " - " + temp2;
+                return question;
+            case 2:
+                question += temp1 + " * " + temp2;
+                return question;
             default:
-                System.out.println("\nQuestion: " + temp1 + " * " + temp2);
-                rightAnswerInside = temp1 * temp2;
-                return Integer.toString(rightAnswerInside);
+                throw new Error("Unknown value: " + oper);
+        }
+
+    }
+
+    //calculate right answer
+    public static int getRightAnswer() {
+
+        switch (oper) {
+            case 0:
+                rightAnswer = temp1 + temp2;
+                return rightAnswer;
+            case 1:
+                rightAnswer = temp1 - temp2;
+                return rightAnswer;
+            case 2:
+                rightAnswer = temp1 * temp2;
+                return rightAnswer;
+            default:
+                throw new Error("Unknown value: " + oper);
+
         }
 
     }

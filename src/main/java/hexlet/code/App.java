@@ -2,59 +2,93 @@ package hexlet.code;
 
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
-import hexlet.code.games.GDC;
-import hexlet.code.games.Greet;
+import hexlet.code.games.GCD;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+
+        ArrayList<Integer> choices = new ArrayList<>();
+
         final int greetNum = 1;
+        choices.add(greetNum);
         final int evenNum = 2;
+        choices.add(evenNum);
         final int calcNum = 3;
-        final int gdcNum = 4;
+        choices.add(calcNum);
+        final int gcdNum = 4;
+        choices.add(gcdNum);
         final int progressionNum = 5;
+        choices.add(progressionNum);
         final int primeNum = 6;
+        choices.add(primeNum);
         final int exitNum = 0;
+        choices.add(exitNum);
+
+        boolean correctData = false;
 
         System.out.println("\nPlease enter the game number and press Enter."
                 + "\n1 - Greet"
                 + "\n2 - Even"
                 + "\n3 - Calc"
-                + "\n4 - GDC"
+                + "\n4 - GCD"
                 + "\n5 - Progression"
                 + "\n6 - Prime"
                 + "\n0 - Exit");
-        System.out.print("your choice: ");
-        switch (EnterGame.choiceGame()) {
-            case greetNum:
-                Greet.playGreet();
-                break;
-            case evenNum:
-                Even even = new Even();
-                even.playThisGame();
-                break;
-            case calcNum:
-                Calc calc = new Calc();
-                calc.playThisGame();
-                break;
-            case gdcNum:
-                GDC gdc = new GDC();
-                gdc.playThisGame();
-                break;
-            case progressionNum:
-                Progression progression = new Progression();
-                progression.playThisGame();
-                break;
-            case primeNum:
-                Prime prime = new Prime();
-                prime.playThisGame();
-                break;
-            case exitNum: System.out.println("Goodbye, have a nice day!");
-                break;
-            default:
-                System.out.println("wrong data T_T");
-        }
 
+        System.out.print("your choice: ");
+        Scanner scanner = new Scanner(System.in);
+        int choice = Integer.parseInt(scanner.nextLine());
+
+        //correct data?
+
+        for (int i = 0; i < choices.size(); i++) {
+            if (choice == choices.get(i)) {
+                correctData = true;
+                break;
+            }
+        }
+        if (!correctData) {
+            System.out.println("wrong data T_T");
+        } else {
+
+            //it exit?
+
+            if (choice == exitNum) {
+                System.out.println("Goodbye, have a nice day!");
+            } else {
+
+                //it ok, greet and play
+
+                Cli.greeting();
+
+                switch (choice) {
+                    case greetNum:
+                        break;
+                    case evenNum:
+                        Even.playEven();
+                        break;
+                    case calcNum:
+                        Calc.playCalc();
+                        break;
+                    case gcdNum:
+                        GCD.playGCD();
+                        break;
+                    case progressionNum:
+                        Progression.playProgression();
+                        break;
+                    case primeNum:
+                        Prime.playPrime();
+                        break;
+
+                    default:
+                        throw new Error("Unknown value: " + choice);
+                }
+            }
+        }
     }
 }
