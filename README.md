@@ -4,12 +4,6 @@
 [![Java CI](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/build-gradle.yml/badge.svg)](https://github.com/Plasticc66/java-project-lvl1/actions/workflows/build-gradle.yml)
 
 
-Demo Even: https://asciinema.org/a/4hBpzpa0bzjndazHG095oh3jO
+### Asciinema:
 
-Demo Calc: https://asciinema.org/a/BZpotjOecodO4sWjN6iuM9Bf3
-
-Demo GDC: https://asciinema.org/a/USwCfTHU65HzMiKCBHIk7MjY4
-
-Demo Progression: https://asciinema.org/a/Wqz8hDRjcVScLlXiDtc8Pkqpk
-
-Demo Prime: https://asciinema.org/a/8Xt0DVQCsUJnrkKBOUE6zYXq9
+[Demo Even](https://asciinema.org/a/MnztiQdWwKHFWqNqRugi1MQJT)   [Demo Calc](https://asciinema.org/a/LpixPycV4jGpop6pGMPErtMTl)   [Demo GDC](https://asciinema.org/a/NzGNQYDBKx3mdXY6pSZbNuZOo)   [Demo Progression](https://asciinema.org/a/QdlazCRJyNwhFxlr8hn4F3ibw)   [Demo Prime](https://asciinema.org/a/sgv1PUi2EmTsl0XgIuinYn97S)
