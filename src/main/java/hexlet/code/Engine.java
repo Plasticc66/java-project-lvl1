@@ -39,14 +39,14 @@ public class Engine {
         return lose;
     }
 
-    public Engine(int rightAnswer, String question) {
-        this.question = question;
-        this.rightAnswer = rightAnswer;
+    public Engine(int rightAnswerInside, String questionInside) {
+        this.question = questionInside;
+        this.rightAnswer = rightAnswerInside;
     }
 
-    public Engine(String rightAnswerString, String question) {
-        this.question = question;
-        this.rightAnswerString = rightAnswerString;
+    public Engine(String rightAnswerStringInside, String questionInside) {
+        this.question = questionInside;
+        this.rightAnswerString = rightAnswerStringInside;
     }
 
     //WIN-LOSE LOGIC
