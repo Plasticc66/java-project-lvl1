@@ -40,13 +40,13 @@ public class Engine {
     }
 
     public Engine(int rightAnswer, String question) {
-       /* this.question = question;
-        this.rightAnswer = rightAnswer;*/
+        this.question = question;
+        this.rightAnswer = rightAnswer;
     }
 
     public Engine(String rightAnswerString, String question) {
-        /*this.question = question;
-        this.rightAnswerString = rightAnswerString;*/
+        this.question = question;
+        this.rightAnswerString = rightAnswerString;
     }
 
     //WIN-LOSE LOGIC

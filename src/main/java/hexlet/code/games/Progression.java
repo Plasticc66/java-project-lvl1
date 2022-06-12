@@ -12,8 +12,8 @@ public class Progression {
 
 
     private static Random random = new Random();
-    static final int LengthArray = 10;
-    private static String[] progressionLine = new String[LengthArray];
+    static final int LENGTH_ARRAY = 10;
+    private static String[] progressionLine = new String[LENGTH_ARRAY];
 
     public static void playProgression() {
 

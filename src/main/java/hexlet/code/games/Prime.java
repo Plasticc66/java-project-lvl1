@@ -11,7 +11,7 @@ public class Prime {
     private static String rightAnswer;
 
     private static Random random = new Random();
-    static final int RandomBound = 98;
+    static final int RANDOM_BOUND = 98;
     private static int temp;
 
     public static void playPrime() {
@@ -21,7 +21,7 @@ public class Prime {
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
             if (!Engine.itLose()) {
 
-                temp = random.nextInt(RandomBound) + 2;
+                temp = random.nextInt(RANDOM_BOUND) + 2;
 
                 Engine prime = new Engine(
                         getRightAnswer(),
