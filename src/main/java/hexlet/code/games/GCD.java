@@ -1,9 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class GCD {
 
@@ -15,8 +15,8 @@ public class GCD {
     private static int temp2;
 
     public static void playGCD() {
-        Random random = new Random();
-        final int randomBound = 98;
+        final int leftBound = 2;
+        final int rightBound = 98;
 
         System.out.println(rule);
 
@@ -24,8 +24,8 @@ public class GCD {
             if (!Engine.itLose()) {
                 while (rightAnswer == 1) {
                     do {
-                        temp1 = random.nextInt(randomBound) + 2;
-                        temp2 = random.nextInt(randomBound) + 2;
+                        temp1 = Utils.getRandomInt(leftBound, rightBound);
+                        temp2 = Utils.getRandomInt(leftBound, rightBound);
                     }
                     while (temp1 == temp2);
                     getRightAnswer();
@@ -43,6 +43,7 @@ public class GCD {
     }
 
     public static int getRightAnswer() {
+
         ArrayList<Integer> divTemp1 = new ArrayList<>();
         ArrayList<Integer> divTemp2 = new ArrayList<>();
 

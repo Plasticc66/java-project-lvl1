@@ -1,14 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Calc {
     //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
-    //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно
+    //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно (?)
 
-    private static String rule = "What is the result of the expression?";
+    private static final String RULE = "What is the result of the expression?";
     private static String question;
     private static int rightAnswer;
 
@@ -18,19 +17,19 @@ public class Calc {
 
     //main game-method
     public static void playCalc() {
+        final int leftBound = 2;
+        final int rightBound = 18;
+        final int operationBound = 3;
 
-        final int rndmBound = 18;
-        final int operBound = 3;
-        Random rndm = new Random();
-
-        System.out.println(rule);
+        System.out.println(RULE);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
             if (!Engine.itLose()) {
 
-                oper = rndm.nextInt(operBound);
-                temp1 = rndm.nextInt(rndmBound) + 2;
-                temp2 = rndm.nextInt(rndmBound) + 2;
+                oper = Utils.getRandomInt(0,operationBound);
+                temp1 = Utils.getRandomInt(leftBound,rightBound);
+                temp2 = Utils.getRandomInt(leftBound,rightBound);
+
 
                 Engine calc = new Engine(
                         getRightAnswer(),

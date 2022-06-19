@@ -1,32 +1,29 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Even {
 
     private static String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
     private static String question;
-    private static String rightAnswer;
+    private static boolean rightAnswer;
     private static int temp;
 
     public static void playEven() {
 
-
-        Random random = new Random();
-        final int randomBound = 20;
+        final int rightBound = 20;
 
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
             if (!Engine.itLose()) {
 
-                temp = random.nextInt(randomBound);
-                Engine even = new Engine(
+                temp = Utils.getRandomInt(0,rightBound);
+                /*Engine even = new Engine(
                         getRightAnswer(),
                         getQuestion());
-                even.playThisGame("StringType");
+                even.playThisGame("StringType");*/
             }
         }
 
@@ -37,12 +34,8 @@ public class Even {
         return question;
     }
 
-    public static String getRightAnswer() {
-        if (temp % 2 == 0) {
-            rightAnswer = "yes";
-        } else {
-            rightAnswer = "no";
-        }
+    private static boolean getRightAnswer() {
+        if (temp % 2 == 0) {rightAnswer = true;}
         return rightAnswer;
     }
 

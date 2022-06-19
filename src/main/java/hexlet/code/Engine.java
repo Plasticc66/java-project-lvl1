@@ -17,6 +17,7 @@ public class Engine {
     }
 
     private static int rightAnswer;
+
     public static int getRightAnswer() {
         return rightAnswer;
     }
@@ -49,6 +50,37 @@ public class Engine {
         this.rightAnswerString = rightAnswerStringInside;
     }
 
+    public static void run(String rule, String[] questionsAndAnswers) {
+        //буду записывать в массив вопрос-ответ-вопрос-ответ
+        //четные индексы = вопросы
+        //и наоборот соотв
+        //длинна уже будет выбираться самой игрой, так что здесь нужен будет цикл
+        System.out.println(rule);
+
+        for (int i = 0; i < questionsAndAnswers.length; i = +2) {
+
+            System.out.println(questionsAndAnswers[i]);
+            Scanner scanner = new Scanner(System.in);
+            String playerAnswer = scanner.nextLine();
+
+            if (questionsAndAnswers[i + 1].equals(playerAnswer)) {
+                System.out.println("Correct!");
+                winstreakForCongrats++;
+            } else {
+                System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
+                        + "'.\nLet's try again, " + "NONAME" + "!");
+                lose = true;
+            }
+
+            if (winstreakForCongrats == WIN_FOR_END) {
+                System.out.println("Congratulations, " + "NONAME" + "!");
+            }
+
+        }
+    }
+
+
+    //---------------------------------------------------------
     //WIN-LOSE LOGIC
     public static void playThisGame() {
 
@@ -63,12 +95,12 @@ public class Engine {
             winstreakForCongrats++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                    + "'.\nLet's try again, " + Cli.getName() + "!");
+                    + "'.\nLet's try again, " + "NONAME" + "!");
             lose = true;
         }
 
         if (winstreakForCongrats == WIN_FOR_END) {
-            System.out.println("Congratulations, " + Cli.getName() + "!");
+            System.out.println("Congratulations, " + "NONAME" + "!");
         }
     }
 
@@ -86,14 +118,14 @@ public class Engine {
             winstreakForCongrats++;
         } else {
             System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswerString
-                    + "'.\nLet's try again, " + Cli.getName() + "!");
+                    + "'.\nLet's try again, " + "NONAME" + "!");
             lose = true;
         }
 
         if (winstreakForCongrats == WIN_FOR_END) {
-            System.out.println("Congratulations, " + Cli.getName() + "!");
+            System.out.println("Congratulations, " + "NONAME" + "!");
         }
     }
+    //--------------------------------------------------------------------------
 
 }
-
