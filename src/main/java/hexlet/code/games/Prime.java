@@ -7,36 +7,35 @@ public class Prime {
 
     private static String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static String question;
-    private static String rightAnswer;
+    private static boolean rightAnswer;
     private static int temp;
 
     public static void playPrime() {
 
         final int rightBound = 98;
-final int leftBound = 2;
+        final int leftBound = 2;
 
         System.out.println(rule);
 
         for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
             if (!Engine.itLose()) {
 
-                temp = Utils.getRandomInt(leftBound,rightBound);
-                Engine prime = new Engine(
+                temp = Utils.getRandomInt(leftBound, rightBound);
+               /* Engine prime = new Engine(
                         getRightAnswer(),
                         getQuestion());
-                prime.playThisGame("StringType");
+                prime.playThisGame("StringType");*/
             }
         }
 
     }
 
-    public static String getRightAnswer() {
+    private static boolean isPrime(int number) {
+
         for (int i = 2; i < temp; i++) {
             if (temp % i == 0) {
-                rightAnswer = "no";
+                rightAnswer = false;
                 break;
-            } else {
-                rightAnswer = "yes";
             }
         }
         return rightAnswer;

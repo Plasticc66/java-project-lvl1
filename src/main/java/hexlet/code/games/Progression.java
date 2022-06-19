@@ -5,14 +5,18 @@ import hexlet.code.Utils;
 
 public class Progression {
 
+    /*Вопросы и ответы записывать в один двумерный массив,
+    сделать его локальным , а не полем класса.*/
+
     private static String rule = "What number is missing in the progression?";
     private static String question;
     private static int rightAnswer;
 
-    static final int LENGTH_ARRAY = 10;
-    private static String[] progressionLine = new String[LENGTH_ARRAY];
 
     public static void playProgression() {
+
+        final int lengthArray = 10;
+        String[] progressionLine = new String[lengthArray];
 
         final int rightBound = 21;
         final int stepRightBound = 9;
@@ -44,18 +48,21 @@ final int stepLeftBound = 1;
 
         final int skipRightBound = 10;
         int skip = Utils.getRandomInt(0,skipRightBound);
-        rightAnswer = Integer.parseInt(progressionLine[skip]);
-        progressionLine[skip] = "..";
+        /*rightAnswer = Integer.parseInt(progressionLine[skip]);
+        progressionLine[skip] = "..";*/
+
+        //это рабочие строки, просто будут  использоваться по-дргуому в одном месте с остальными данными
+        //конкретно сейчас выдает ошибку поэтому закомментил
 
         return rightAnswer;
     }
 
     public static String getQuestion() {
 
-        question = "\nQuestion: ";
+        /*question = "\nQuestion: ";
         for (int i = 0; i < progressionLine.length; i++) {
             question += progressionLine[i] + " ";
-        }
+        }*/
 
         return question;
     }

@@ -28,7 +28,7 @@ public class GCD {
                         temp2 = Utils.getRandomInt(leftBound, rightBound);
                     }
                     while (temp1 == temp2);
-                    getRightAnswer();
+                    gcd(temp1,temp2);
                 }
 
                 Engine gcd = new Engine(
@@ -42,50 +42,10 @@ public class GCD {
         }
     }
 
-    public static int getRightAnswer() {
-
-        ArrayList<Integer> divTemp1 = new ArrayList<>();
-        ArrayList<Integer> divTemp2 = new ArrayList<>();
-
-        //divisors search
-        for (int i = 2; i < temp1 + 1; i++) {
-            if (temp1 % i == 0) {
-                divTemp1.add(i);
-            }
-        }
-        for (int i = 2; i < temp2 + 1; i++) {
-            if (temp2 % i == 0) {
-                divTemp2.add(i);
-            }
-        }
-
-        if (divTemp1.size() == 1 || divTemp2.size() == 1) {
-            if (divTemp2.get(0) == divTemp1.get(0)) {
-                rightAnswer = divTemp1.get(0);
-            }
-        } else {
-
-            for (int i = divTemp1.size() - 1; i > 0; i--) {
-                for (int j = divTemp2.size() - 1; j > 0; j--) {
-                    if (divTemp1.get(i) == divTemp2.get(j)) {
-                        rightAnswer = divTemp1.get(i);
-                        break;
-
-                    } else {
-
-                        if (divTemp1.get(i) > divTemp2.get(j)) {
-                            j++;
-                            i--;
-                        }
-                    }
-                }
-
-                break;
-            }
-        }
-
-        return rightAnswer;
+    private static int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
     }
+
 
     public static String getQuestion() {
         question = "\nQuestion: " + temp1 + " " + temp2;
