@@ -4,80 +4,55 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-    //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
-    //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно (?)
 
-    private static final String RULE = "What is the result of the expression?";
-    private static String question;
-    private static int rightAnswer;
-
-    private static int oper;
-    private static int temp1;
-    private static int temp2;
-
-    //main game-method
     public static void playCalc() {
+
+        String rule = "What is the result of the expression?";
+
+        final int amountData = 6;
+        String[] questionsAndAnswers = new String[amountData];
+
+        int operation;
+        int temp1;
+        int temp2;
+
         final int leftBound = 2;
         final int rightBound = 18;
         final int operationBound = 3;
 
-        System.out.println(RULE);
 
-        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (!Engine.itLose()) {
+        for (int i = 0; i < amountData; i += 2) {
 
-                oper = Utils.getRandomInt(0,operationBound);
-                temp1 = Utils.getRandomInt(leftBound,rightBound);
-                temp2 = Utils.getRandomInt(leftBound,rightBound);
+            operation = Utils.getRandomInt(0, operationBound);
+            temp1 = Utils.getRandomInt(leftBound, rightBound);
+            temp2 = Utils.getRandomInt(leftBound, rightBound);
 
+            String answer = "";
+            String question = "\nQuestion: ";
 
-               /* Engine calc = new Engine(
-                        getRightAnswer(),
-                        getQuestion());
-
-                calc.playThisGame();*/
-            }
+            Calc.fillArray(i, questionsAndAnswers, temp1, temp2, operation);
         }
+
+        Engine.run(rule, questionsAndAnswers);
     }
 
-    //generate question
-    public static String getQuestion() {
-        question = "\nQuestion: ";
+    public static String[] fillArray(int i, String[] array, int temp1, int temp2, int operation) {
 
-        switch (oper) {
+        switch (operation) {
             case 0:
-                question += temp1 + " + " + temp2;
-                return question;
+                array[i] = "\nQuestion: " + temp1 + " + " + temp2;
+                array[i + 1] = String.valueOf(temp1 + temp2);
+                return array;
             case 1:
-                question += temp1 + " - " + temp2;
-                return question;
+                array[i] = "\nQuestion: " + temp1 + " - " + temp2;
+                array[i + 1] = String.valueOf(temp1 - temp2);
+                return array;
             case 2:
-                question += temp1 + " * " + temp2;
-                return question;
+                array[i] = "\nQuestion: " + temp1 + " * " + temp2;
+                array[i + 1] = String.valueOf(temp1 * temp2);
+                return array;
             default:
-                throw new Error("Unknown value: " + oper);
+                throw new Error("Unknown value: " + operation);
         }
-
     }
-
-    //calculate right answer
-    public static int getRightAnswer() {
-
-        switch (oper) {
-            case 0:
-                rightAnswer = temp1 + temp2;
-                return rightAnswer;
-            case 1:
-                rightAnswer = temp1 - temp2;
-                return rightAnswer;
-            case 2:
-                rightAnswer = temp1 * temp2;
-                return rightAnswer;
-            default:
-                throw new Error("Unknown value: " + oper);
-
-        }
-
-    }
-
 }
