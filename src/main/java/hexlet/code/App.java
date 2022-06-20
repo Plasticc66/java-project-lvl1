@@ -2,7 +2,6 @@ package hexlet.code;
 
 import hexlet.code.games.*;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -48,7 +47,7 @@ public class App {
                 break;
             case progressionNum:
                 Cli.greeting();
-                ProgressionNew.playProgression();
+                Progression.playProgression();
                 break;
             case primeNum:
                 Cli.greeting();

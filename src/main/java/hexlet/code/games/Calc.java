@@ -31,11 +31,11 @@ public class Calc {
                 temp2 = Utils.getRandomInt(leftBound,rightBound);
 
 
-                Engine calc = new Engine(
+               /* Engine calc = new Engine(
                         getRightAnswer(),
                         getQuestion());
 
-                calc.playThisGame();
+                calc.playThisGame();*/
             }
         }
     }
