@@ -5,45 +5,44 @@ import hexlet.code.Utils;
 
 public class Prime {
 
-    private static String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    private static String question;
-    private static boolean rightAnswer;
-    private static int temp;
-
     public static void playPrime() {
 
+        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+
+        final int amountData = 6;
+        String[] questionsAndAnswers = new String[amountData];
+
+        int temp;
         final int rightBound = 98;
         final int leftBound = 2;
 
-        System.out.println(rule);
 
-        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (!Engine.itLose()) {
+        for (int i = 0; i < amountData; i += 2) {
 
-                temp = Utils.getRandomInt(leftBound, rightBound);
-               /* Engine prime = new Engine(
-                        getRightAnswer(),
-                        getQuestion());
-                prime.playThisGame("StringType");*/
+            temp = Utils.getRandomInt(leftBound, rightBound);
+            String question = "\nQuestion: " + temp;
+            questionsAndAnswers[i] = question;
+
+            String answer;
+            if (Prime.isPrime(temp)) {
+                questionsAndAnswers[i + 1] = "yes";
+            } else if (!(Prime.isPrime(temp))) {
+                questionsAndAnswers[i + 1] = "no";
             }
         }
-
+        Engine.run(rule, questionsAndAnswers);
     }
 
     private static boolean isPrime(int number) {
 
-        for (int i = 2; i < temp; i++) {
-            if (temp % i == 0) {
-                rightAnswer = false;
+        boolean prime = true;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                prime = false;
                 break;
             }
         }
-        return rightAnswer;
-    }
-
-    public static String getQuestion() {
-        question = "\nQuestion: " + temp;
-        return question;
+        return prime;
     }
 
 }
