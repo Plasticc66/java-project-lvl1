@@ -5,38 +5,33 @@ import hexlet.code.Utils;
 
 public class Even {
 
-    private static String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
-    private static String question;
-    private static boolean rightAnswer;
-    private static int temp;
-
     public static void playEven() {
 
-        final int rightBound = 20;
+        String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
 
-        System.out.println(rule);
+        final int amountData = 6;
+        String[] questionsAndAnswers = new String[amountData];
 
-        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (!Engine.itLose()) {
+        int temp;
+        final int rightBound = 100;
 
-                temp = Utils.getRandomInt(0,rightBound);
-                /*Engine even = new Engine(
-                        getRightAnswer(),
-                        getQuestion());
-                even.playThisGame("StringType");*/
+        for (int i = 0; i < amountData; i += 2) {
+
+            temp = Utils.getRandomInt(0, rightBound);
+
+            questionsAndAnswers[i] = "\nQuestion: " + temp;
+
+            if (Even.isEven(temp)) {
+                questionsAndAnswers[i + 1] = "yes";
+            } else {
+                questionsAndAnswers[i + 1] = "no";
             }
         }
-
+        Engine.run(rule, questionsAndAnswers);
     }
 
-    public static String getQuestion() {
-        question = "\nQuestion: " + temp;
-        return question;
-    }
-
-    private static boolean getRightAnswer() {
-        if (temp % 2 == 0) {rightAnswer = true;}
-        return rightAnswer;
+    private static boolean isEven(int temp) {
+        return temp % 2 == 0;
     }
 
 }
