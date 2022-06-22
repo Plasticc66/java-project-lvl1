@@ -39,7 +39,7 @@ public class App {
                 break;
             case calcNum:
                 Cli.greeting();
-                Calc.playCalc();
+                Calc.playCalc();            //test!!
                 break;
             case gcdNum:
                 Cli.greeting();

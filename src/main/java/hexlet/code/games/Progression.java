@@ -13,7 +13,7 @@ public class Progression {
         final int lengthArray = 10;
         String[] progressionLine = new String[lengthArray];
         final int amountData = 6;
-        String[] questionsAndAnswers = new String[amountData];
+        String[][] questionsAndAnswers = new String[amountData][2];
 
         final int rightBound = 21;
         final int stepRightBound = 9;
@@ -41,8 +41,8 @@ public class Progression {
                 question += progressionLine[k] + " ";
             }
 
-            questionsAndAnswers[i] = question;
-            questionsAndAnswers[i + 1] = answer;
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][1] = answer;
         }
 
         //вызов движка
