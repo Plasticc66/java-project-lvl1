@@ -5,9 +5,9 @@ import hexlet.code.Utils;
 
 public class Prime {
 
-    public static void playPrime() {
+    public static final String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static void playPrime() {
 
         final int amountData = 6;
         String[][] questionsAndAnswers = new String[amountData][2];

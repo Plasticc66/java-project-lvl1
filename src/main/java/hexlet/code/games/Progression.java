@@ -5,11 +5,10 @@ import hexlet.code.Utils;
 
 public class Progression {
 
+    public static final String rule = "What number is missing in the progression?";
+
     public static void playProgression() {
 
-        String rule = "What number is missing in the progression?";
-
-        //объявление переменных и констант
         final int lengthArray = 10;
         String[] progressionLine = new String[lengthArray];
         final int amountData = 6;
@@ -20,8 +19,7 @@ public class Progression {
         final int stepLeftBound = 1;
         final int skipRightBound = 10;
 
-        //вычисление массива вопросов и ответов
-        for (int i = 0; i < amountData; i ++) {
+        for (int i = 0; i < amountData; i++) {
 
             int step = Utils.getRandomInt(stepLeftBound, stepRightBound);
             int firstNum = Utils.getRandomInt(0, rightBound);
@@ -45,7 +43,6 @@ public class Progression {
             questionsAndAnswers[i][1] = answer;
         }
 
-        //вызов движка
         Engine.run(rule, questionsAndAnswers);
 
     }

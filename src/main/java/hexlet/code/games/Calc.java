@@ -5,9 +5,9 @@ import hexlet.code.Utils;
 
 public class Calc {
 
-    public static void playCalc() {
+    public static final String rule = "What is the result of the expression?";
 
-        String rule = "What is the result of the expression?";
+    public static void playCalc() {
 
         final int amountData = 6;
         String[][] questionsAndAnswers = new String[amountData][2];
