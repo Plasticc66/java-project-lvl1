@@ -21,7 +21,7 @@ public class Progression {
         final int skipRightBound = 10;
 
         //вычисление массива вопросов и ответов
-        for (int i = 0; i < amountData; i += 2) {
+        for (int i = 0; i < amountData; i ++) {
 
             int step = Utils.getRandomInt(stepLeftBound, stepRightBound);
             int firstNum = Utils.getRandomInt(0, rightBound);

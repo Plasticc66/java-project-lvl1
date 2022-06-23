@@ -17,7 +17,7 @@ public class GCD {
         int temp1;
         int temp2;
 
-        for (int i = 0; i < amountData; i += 2) {
+        for (int i = 0; i < amountData; i ++) {
             do {
                 temp1 = Utils.getRandomInt(leftBound, rightBound);
                 temp2 = Utils.getRandomInt(leftBound, rightBound);
