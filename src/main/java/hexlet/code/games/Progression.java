@@ -4,10 +4,9 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-
-    public static final String rule = "What number is missing in the progression?";
-
     public static void playProgression() {
+
+        String rule = "What number is missing in the progression?";
 
         final int lengthArray = 10;
         String[] progressionLine = new String[lengthArray];
@@ -34,12 +33,12 @@ public class Progression {
             String answer = progressionLine[skip];
             progressionLine[skip] = "..";
 
-            String question = "\nQuestion: ";
-            for (int k = 0; k < progressionLine.length; k++) {
-                question += progressionLine[k] + " ";
+            StringBuilder question = new StringBuilder("\nQuestion: ");
+            for (String s : progressionLine) {
+                question.append(s).append(" ");
             }
 
-            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][0] = question.toString();
             questionsAndAnswers[i][1] = answer;
         }
 

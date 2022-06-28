@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine {
 
     private static final int WIN_FOR_END = 3;
-    private static int WIN_STREAK_FOR_CONGRATS = 0;
+    private static int winStreakForCongrats = 0;
     private static boolean lose = false;
     public static boolean itLose() {
         return lose;
@@ -31,7 +31,7 @@ public class Engine {
 
                 if (questionsAndAnswers[i][j + 1].equals(playerAnswer)) {
                     System.out.println("Correct!");
-                    WIN_STREAK_FOR_CONGRATS++;
+                    winStreakForCongrats++;
                 } else {
                     System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
                             + questionsAndAnswers[i][j + 1]
@@ -41,7 +41,7 @@ public class Engine {
                 }
             }
 
-            if (WIN_STREAK_FOR_CONGRATS == WIN_FOR_END) {
+            if (winStreakForCongrats == WIN_FOR_END) {
                 System.out.println("Congratulations, " + name + "!");
             }
         }

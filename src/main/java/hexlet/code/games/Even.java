@@ -4,10 +4,9 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
-
-    public static final String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
-
     public static void playEven() {
+
+        String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
 
         final int amountData = 6;
         String[][] questionsAndAnswers = new String[amountData][2];

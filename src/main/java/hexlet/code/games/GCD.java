@@ -4,10 +4,9 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
-
-    public static final String rule = "Find the greatest common divisor of given numbers.";
-
     public static void playGCD() {
+
+        String rule = "Find the greatest common divisor of given numbers.";
 
         final int amountData = 6;
         String[][] questionsAndAnswers = new String[amountData][2];
@@ -17,7 +16,7 @@ public class GCD {
         int temp1;
         int temp2;
 
-        for (int i = 0; i < amountData; i ++) {
+        for (int i = 0; i < amountData; i++) {
             do {
                 temp1 = Utils.getRandomInt(leftBound, rightBound);
                 temp2 = Utils.getRandomInt(leftBound, rightBound);
