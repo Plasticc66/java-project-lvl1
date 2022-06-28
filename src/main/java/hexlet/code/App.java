@@ -34,23 +34,18 @@ public class App {
                 Cli.greeting();
                 break;
             case evenNum:
-                Cli.greeting();
                 Even.playEven();
                 break;
             case calcNum:
-                Cli.greeting();
-                Calc.playCalc();            //test!!
+                Calc.playCalc();
                 break;
             case gcdNum:
-                Cli.greeting();
                 GCD.playGCD();
                 break;
             case progressionNum:
-                Cli.greeting();
                 Progression.playProgression();
                 break;
             case primeNum:
-                Cli.greeting();
                 Prime.playPrime();
                 break;
             case exitNum:
