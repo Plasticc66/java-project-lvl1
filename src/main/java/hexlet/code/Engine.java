@@ -14,12 +14,14 @@ public class Engine {
     public static void run(String rule, String[][] questionsAndAnswers) {
 
         Scanner scanner = new Scanner(System.in);
-        String name = "NoName";
+
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        String name = scanner.nextLine();
+        System.out.println("\nHello, " + name + "!");
+
         System.out.println(rule);
         final int roundsNum = 3;
-
-        //остановился тут, думал как правильно установить условия цикла,
-        // потом надо будет понять как прописывать [][]
 
         for (int i = 0; i < roundsNum; i++) {
             int j = 0;
