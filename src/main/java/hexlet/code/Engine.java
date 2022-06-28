@@ -4,96 +4,47 @@ import java.util.Scanner;
 
 public class Engine {
 
-    static final int WIN_FOR_END = 3;
-
-    public static int getWinForEnd() {
-        return WIN_FOR_END;
-    }
-
-    private static String question;
-
-    public static String getQuestion() {
-        return question;
-    }
-
-    private static int rightAnswer;
-    public static int getRightAnswer() {
-        return rightAnswer;
-    }
-
-    private static String rightAnswerString;
-
-    public static String getRightAnswerString() {
-        return getRightAnswerString();
-    }
-
-    private static int winstreakForCongrats = 0;
-
-    public static int getWinstreakForCongrats() {
-        return winstreakForCongrats;
-    }
-
+    private static final int WIN_FOR_END = 3;
+    private static int winStreakForCongrats = 0;
     private static boolean lose = false;
-
     public static boolean itLose() {
         return lose;
     }
 
-    public Engine(int rightAnswerInside, String questionInside) {
-        this.question = questionInside;
-        this.rightAnswer = rightAnswerInside;
-    }
-
-    public Engine(String rightAnswerStringInside, String questionInside) {
-        this.question = questionInside;
-        this.rightAnswerString = rightAnswerStringInside;
-    }
-
-    //WIN-LOSE LOGIC
-    public static void playThisGame() {
+    public static void run(String rule, String[][] questionsAndAnswers) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println(question);
-        System.out.print("Your answer: ");
-        int playerAnswer = scanner.nextInt();
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        String name = scanner.nextLine();
+        System.out.println("\nHello, " + name + "!");
 
-        if (playerAnswer == rightAnswer) {
-            System.out.println("Correct!");
-            winstreakForCongrats++;
-        } else {
-            System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                    + "'.\nLet's try again, " + Cli.getName() + "!");
-            lose = true;
-        }
+        System.out.println(rule);
+        final int roundsNum = 3;
 
-        if (winstreakForCongrats == WIN_FOR_END) {
-            System.out.println("Congratulations, " + Cli.getName() + "!");
-        }
-    }
+        for (int i = 0; i < roundsNum; i++) {
+            int j = 0;
+            if (!Engine.itLose()) {
+                System.out.println(questionsAndAnswers[i][j]);
+                String playerAnswer = scanner.nextLine();
 
-    //overwrite lvl jun
-    public static void playThisGame(String type) {
+                if (questionsAndAnswers[i][j + 1].equals(playerAnswer)) {
+                    System.out.println("Correct!");
+                    winStreakForCongrats++;
+                } else {
+                    System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
+                            + questionsAndAnswers[i][j + 1]
+                            + "'.\nLet's try again, " + name + "!");
+                    lose = true;
+                    //break;
+                }
+            }
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(question);
-        System.out.print("Your answer: ");
-        String playerAnswer = scanner.nextLine();
-
-        if (playerAnswer.equals(rightAnswerString)) {
-            System.out.println("Correct!");
-            winstreakForCongrats++;
-        } else {
-            System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswerString
-                    + "'.\nLet's try again, " + Cli.getName() + "!");
-            lose = true;
-        }
-
-        if (winstreakForCongrats == WIN_FOR_END) {
-            System.out.println("Congratulations, " + Cli.getName() + "!");
+            if (winStreakForCongrats == WIN_FOR_END) {
+                System.out.println("Congratulations, " + name + "!");
+            }
         }
     }
 
 }
-

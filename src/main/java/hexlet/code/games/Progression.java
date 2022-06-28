@@ -1,65 +1,48 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Progression {
-
-    private static String rule = "What number is missing in the progression?";
-    private static String question;
-    private static int rightAnswer;
-
-
-    private static Random random = new Random();
-    static final int LENGTH_ARRAY = 10;
-    private static String[] progressionLine = new String[LENGTH_ARRAY];
-
     public static void playProgression() {
 
-        final int randomBound = 21;
-        final int stepBound = 9;
+        String rule = "What number is missing in the progression?";
 
-        System.out.println(rule);
+        final int lengthArray = 10;
+        String[] progressionLine = new String[lengthArray];
+        final int amountData = 6;
+        String[][] questionsAndAnswers = new String[amountData][2];
 
-        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (!Engine.itLose()) {
+        final int rightBound = 21;
+        final int stepRightBound = 9;
+        final int stepLeftBound = 1;
+        final int skipRightBound = 10;
 
-                int step = random.nextInt(stepBound) + 1;
-                int firstNum = random.nextInt(randomBound);
+        for (int i = 0; i < amountData; i++) {
 
-                progressionLine[0] = Integer.toString(firstNum);
-                for (int i = 1; i < progressionLine.length; i++) {
-                    progressionLine[i] = Integer.toString(Integer.parseInt(progressionLine[i - 1]) + step);
-                }
+            int step = Utils.getRandomInt(stepLeftBound, stepRightBound);
+            int firstNum = Utils.getRandomInt(0, rightBound);
 
-                Engine progression = new Engine(
-                        getRightAnswer(),
-                        getQuestion());
+            progressionLine[0] = Integer.toString(firstNum);
 
-                progression.playThisGame();
+            for (int j = 1; j < progressionLine.length; j++) {
+                progressionLine[j] = Integer.toString(Integer.parseInt(progressionLine[j - 1]) + step);
             }
-        }
-    }
 
+            int skip = Utils.getRandomInt(0, skipRightBound);
+            String answer = progressionLine[skip];
+            progressionLine[skip] = "..";
 
-    public static int getRightAnswer() {
+            StringBuilder question = new StringBuilder("\nQuestion: ");
+            for (String s : progressionLine) {
+                question.append(s).append(" ");
+            }
 
-        final int skipBound = 10;
-        int skip = random.nextInt(skipBound);
-        rightAnswer = Integer.parseInt(progressionLine[skip]);
-        progressionLine[skip] = "..";
-
-        return rightAnswer;
-    }
-
-    public static String getQuestion() {
-
-        question = "\nQuestion: ";
-        for (int i = 0; i < progressionLine.length; i++) {
-            question += progressionLine[i] + " ";
+            questionsAndAnswers[i][0] = question.toString();
+            questionsAndAnswers[i][1] = answer;
         }
 
-        return question;
+        Engine.run(rule, questionsAndAnswers);
+
     }
 }

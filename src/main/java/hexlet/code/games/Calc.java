@@ -1,84 +1,53 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Calc {
-    //ЗАЧЕМ МНЕ ЭТИ ПОЛЯ, ПОЧ ИМЕННО ПОЛЯ, ПОЧЕМУ НЕ ПРОСТЫЕ ПЕРЕМЕННЫЕ В МЕТОДЕ ММ?
-    //потому, что если объявить их как статик, то можно юзать сразу в нескольких методах, это удобно
 
-    private static String rule = "What is the result of the expression?";
-    private static String question;
-    private static int rightAnswer;
-
-    private static int oper;
-    private static int temp1;
-    private static int temp2;
-
-    //main game-method
     public static void playCalc() {
 
-        final int rndmBound = 18;
-        final int operBound = 3;
-        Random rndm = new Random();
+        String rule = "What is the result of the expression?";
 
-        System.out.println(rule);
+        final int amountData = 6;
+        String[][] questionsAndAnswers = new String[amountData][2];
 
-        for (int winStreak = 0; winStreak < Engine.getWinForEnd(); winStreak++) {
-            if (!Engine.itLose()) {
+        int operation;
+        int temp1;
+        int temp2;
 
-                oper = rndm.nextInt(operBound);
-                temp1 = rndm.nextInt(rndmBound) + 2;
-                temp2 = rndm.nextInt(rndmBound) + 2;
+        final int leftBound = 2;
+        final int rightBound = 18;
+        final int operationBound = 3;
+        final int numRounds = 3;
 
-                Engine calc = new Engine(
-                        getRightAnswer(),
-                        getQuestion());
+        for (int i = 0; i < numRounds; i++) {
 
-                calc.playThisGame();
+            operation = Utils.getRandomInt(0, operationBound);
+            temp1 = Utils.getRandomInt(leftBound, rightBound);
+            temp2 = Utils.getRandomInt(leftBound, rightBound);
+
+            Calc.fillArray(i, questionsAndAnswers, temp1, temp2, operation);
+        }
+        Engine.run(rule, questionsAndAnswers);
+    }
+
+    public static void fillArray(int i, String[][] array, int temp1, int temp2, int operation) {
+
+        switch (operation) {
+            case 0 -> {
+                array[i][0] = "\nQuestion: " + temp1 + " + " + temp2;
+                array[i][1] = String.valueOf(temp1 + temp2);
             }
+            case 1 -> {
+                array[i][0] = "\nQuestion: " + temp1 + " - " + temp2;
+                array[i][1] = String.valueOf(temp1 - temp2);
+            }
+            case 2 -> {
+                array[i][0] = "\nQuestion: " + temp1 + " * " + temp2;
+                array[i][1] = String.valueOf(temp1 * temp2);
+            }
+            default -> throw new Error("Unknown value: " + operation);
         }
     }
-
-    //generate question
-    public static String getQuestion() {
-        question = "\nQuestion: ";
-
-        switch (oper) {
-            case 0:
-                question += temp1 + " + " + temp2;
-                return question;
-            case 1:
-                question += temp1 + " - " + temp2;
-                return question;
-            case 2:
-                question += temp1 + " * " + temp2;
-                return question;
-            default:
-                throw new Error("Unknown value: " + oper);
-        }
-
-    }
-
-    //calculate right answer
-    public static int getRightAnswer() {
-
-        switch (oper) {
-            case 0:
-                rightAnswer = temp1 + temp2;
-                return rightAnswer;
-            case 1:
-                rightAnswer = temp1 - temp2;
-                return rightAnswer;
-            case 2:
-                rightAnswer = temp1 * temp2;
-                return rightAnswer;
-            default:
-                throw new Error("Unknown value: " + oper);
-
-        }
-
-    }
-
 }
