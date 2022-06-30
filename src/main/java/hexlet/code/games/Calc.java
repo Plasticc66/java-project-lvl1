@@ -5,16 +5,15 @@ import hexlet.code.Utils;
 
 public class Calc {
 
+    public static final String rule = "What is the result of the expression?";
+
     public static void playCalc() {
 
-        String rule = "What is the result of the expression?";
-
-        final int amountData = 6;
-        String[][] questionsAndAnswers = new String[amountData][2];
+        String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
         int operation;
-        int temp1;
-        int temp2;
+        int num1;
+        int num2;
 
         final int leftBound = 2;
         final int rightBound = 18;
@@ -24,28 +23,45 @@ public class Calc {
         for (int i = 0; i < numRounds; i++) {
 
             operation = Utils.getRandomInt(0, operationBound);
-            temp1 = Utils.getRandomInt(leftBound, rightBound);
-            temp2 = Utils.getRandomInt(leftBound, rightBound);
+            operation = 0;
+            num1 = Utils.getRandomInt(leftBound, rightBound);
+            num2 = Utils.getRandomInt(leftBound, rightBound);
 
-            Calc.fillArray(i, questionsAndAnswers, temp1, temp2, operation);
+            Calc.fillArray(i, questionsAndAnswers, num1, num2, Calc.convertOperationToChar(operation));
         }
         Engine.run(rule, questionsAndAnswers);
     }
 
-    public static void fillArray(int i, String[][] array, int temp1, int temp2, int operation) {
+    public static void fillArray(int i, String[][] array, int num1, int num2, char operation) {
+
+        array[i][0] = "\nQuestion: " + num1 + operation + num2;
+
+        switch (operation) {
+            case '+': {
+                array[i][1] = String.valueOf(num1 + num2);
+            }
+            case '-': {
+                array[i][1] = String.valueOf(num1 - num2);
+            }
+            case '*': {
+                array[i][1] = String.valueOf(num1 * num2);
+            }
+            default:
+                throw new Error("Unknown value: " + operation);
+        }
+    }
+
+    public static char convertOperationToChar(int operation) {
 
         switch (operation) {
             case 0 -> {
-                array[i][0] = "\nQuestion: " + temp1 + " + " + temp2;
-                array[i][1] = String.valueOf(temp1 + temp2);
+                return '+';
             }
             case 1 -> {
-                array[i][0] = "\nQuestion: " + temp1 + " - " + temp2;
-                array[i][1] = String.valueOf(temp1 - temp2);
+                return '-';
             }
             case 2 -> {
-                array[i][0] = "\nQuestion: " + temp1 + " * " + temp2;
-                array[i][1] = String.valueOf(temp1 * temp2);
+                return '*';
             }
             default -> throw new Error("Unknown value: " + operation);
         }

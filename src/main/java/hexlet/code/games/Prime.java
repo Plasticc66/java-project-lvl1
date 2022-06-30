@@ -5,25 +5,24 @@ import hexlet.code.Utils;
 
 public class Prime {
 
+    public static final String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+
     public static void playPrime() {
 
-        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
-        final int amountData = 6;
-        String[][] questionsAndAnswers = new String[amountData][2];
-
-        int temp;
+        int num;
         final int rightBound = 98;
         final int leftBound = 2;
 
 
-        for (int i = 0; i < amountData; i++) {
+        for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
-            temp = Utils.getRandomInt(leftBound, rightBound);
-            String question = "\nQuestion: " + temp;
+            num = Utils.getRandomInt(leftBound, rightBound);
+            String question = "\nQuestion: " + num;
             questionsAndAnswers[i][0] = question;
 
-            if (Prime.isPrime(temp)) {
+            if (Prime.isPrime(num)) {
                 questionsAndAnswers[i][1] = "yes";
             } else {
                 questionsAndAnswers[i][1] = "no";

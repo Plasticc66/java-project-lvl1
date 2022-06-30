@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static final int WIN_FOR_END = 3;
+    public static final int WIN_FOR_END = 3;
     private static int winStreakForCongrats = 0;
     private static boolean lose = false;
     public static boolean itLose() {

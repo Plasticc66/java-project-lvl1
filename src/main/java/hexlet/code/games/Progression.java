@@ -4,21 +4,21 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static void playProgression() {
 
-        String rule = "What number is missing in the progression?";
+    public static final String rule = "What number is missing in the progression?";
+
+    public static void playProgression() {
 
         final int lengthArray = 10;
         String[] progressionLine = new String[lengthArray];
-        final int amountData = 6;
-        String[][] questionsAndAnswers = new String[amountData][2];
+        String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
         final int rightBound = 21;
         final int stepRightBound = 9;
         final int stepLeftBound = 1;
         final int skipRightBound = 10;
 
-        for (int i = 0; i < amountData; i++) {
+        for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
             int step = Utils.getRandomInt(stepLeftBound, stepRightBound);
             int firstNum = Utils.getRandomInt(0, rightBound);

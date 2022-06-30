@@ -4,27 +4,27 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
+
+    public static final String rule = "Find the greatest common divisor of given numbers.";
+
     public static void playGCD() {
 
-        String rule = "Find the greatest common divisor of given numbers.";
-
-        final int amountData = 6;
-        String[][] questionsAndAnswers = new String[amountData][2];
+        String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
         final int leftBound = 2;
         final int rightBound = 98;
-        int temp1;
-        int temp2;
+        int num1;
+        int num2;
 
-        for (int i = 0; i < amountData; i++) {
+        for (int i = 0; i < Engine.WIN_FOR_END; i++) {
             do {
-                temp1 = Utils.getRandomInt(leftBound, rightBound);
-                temp2 = Utils.getRandomInt(leftBound, rightBound);
+                num1 = Utils.getRandomInt(leftBound, rightBound);
+                num2 = Utils.getRandomInt(leftBound, rightBound);
             }
-            while (GCD.gcd(temp1, temp2) == 1 || temp1 == temp2);
+            while (GCD.gcd(num1, num2) == 1 || num1 == num2);
 
-            questionsAndAnswers[i][0] = "\nQuestion: " + temp1 + " " + temp2;
-            questionsAndAnswers[i][1] = String.valueOf(GCD.gcd(temp1, temp2));
+            questionsAndAnswers[i][0] = "\nQuestion: " + num1 + " " + num2;
+            questionsAndAnswers[i][1] = String.valueOf(GCD.gcd(num1, num2));
         }
 
         Engine.run(rule, questionsAndAnswers);
