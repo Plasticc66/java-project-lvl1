@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Progression {
 
-    public static final String rule = "What number is missing in the progression?";
+    public static final String RULE = "What number is missing in the progression?";
 
     public static void playProgression() {
 
@@ -22,19 +22,19 @@ public class Progression {
             int firstNumber = Utils.getRandomInt(0, firstNumberRightBound);
 
             final int lengthArray = 10;
-            String[] progression = Progression.makeProgression(firstNumber,step,lengthArray);
+            String[] progression = Progression.makeProgression(firstNumber, step, lengthArray);
 
             int skip = Utils.getRandomInt(0, skipRightBound);
             String answer = progression[skip];
             progression[skip] = "..";
 
             String question = String.join(" ", progression);
-            questionsAndAnswers[i][0] = question.toString();
+            questionsAndAnswers[i][0] = question;
 
             questionsAndAnswers[i][1] = answer;
         }
 
-        Engine.run(rule, questionsAndAnswers);
+        Engine.run(RULE, questionsAndAnswers);
 
     }
 
@@ -43,7 +43,9 @@ public class Progression {
         String[] progression = new String[length];
         progression[0] = Integer.toString(first);
 
-        for (int i = 1; i < length; i++) progression[i] = Integer.toString(Integer.parseInt(progression[i - 1]) + step);
+        for (int i = 1; i < length; i++) {
+            progression[i] = Integer.toString(Integer.parseInt(progression[i - 1]) + step);
+        }
         return progression;
     }
 }

@@ -6,10 +6,6 @@ public class Engine {
 
     public static final int WIN_FOR_END = 3;
     private static int winStreakForCongrats = 0;
-    private static boolean lose = false;
-    public static boolean itLose() {
-        return lose;
-    }
 
     public static void run(String rule, String[][] questionsAndAnswers) {
 
@@ -25,24 +21,22 @@ public class Engine {
 
         for (int i = 0; i < roundsNum; i++) {
             int j = 0;
-            if (!Engine.itLose()) {
-                System.out.println(questionsAndAnswers[i][j]);
-                String playerAnswer = scanner.nextLine();
+            System.out.println(questionsAndAnswers[i][j]);
+            String playerAnswer = scanner.nextLine();
 
-                if (questionsAndAnswers[i][j + 1].equals(playerAnswer)) {
-                    System.out.println("Correct!");
-                    winStreakForCongrats++;
-                } else {
-                    System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
-                            + questionsAndAnswers[i][j + 1]
-                            + "'.\nLet's try again, " + name + "!");
-                    lose = true;
-                }
+            if (questionsAndAnswers[i][j + 1].equals(playerAnswer)) {
+                System.out.println("Correct!");
+                winStreakForCongrats++;
+            } else {
+                System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + questionsAndAnswers[i][j + 1]
+                        + "'.\nLet's try again, " + name + "!");
+                break;
             }
+        }
 
-            if (winStreakForCongrats == WIN_FOR_END) {
-                System.out.println("Congratulations, " + name + "!");
-            }
+        if (winStreakForCongrats == WIN_FOR_END) {
+            System.out.println("Congratulations, " + name + "!");
         }
     }
 

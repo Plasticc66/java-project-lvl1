@@ -4,14 +4,15 @@ import java.util.Random;
 
 public class Utils {
 
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
 
     public static int getRandomInt(int leftBound, int rightBound) {
-        return random.nextInt(rightBound - leftBound) + leftBound;
+        return RANDOM.nextInt(rightBound - leftBound) + leftBound;
     }
 
     public static char getRandomOperation() {
-        int operationInt = Utils.getRandomInt(0, 3);
+        final int rightBound = 3;
+        int operationInt = Utils.getRandomInt(0, rightBound);
         char operation = 0;
         switch (operationInt) {
             case 0 -> {

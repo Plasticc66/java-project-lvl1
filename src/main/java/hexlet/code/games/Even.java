@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Even {
 
-    public static final String rule = "Answer 'yes' if number is even, otherwise answer 'no'.";
+    public static final String RULE = "Answer 'yes' if number is even, otherwise answer 'no'.";
 
     public static void playEven() {
 
@@ -22,7 +22,7 @@ public class Even {
 
             questionsAndAnswers[i][1] = isEven(number) ? "yes" : "no";
         }
-        Engine.run(rule, questionsAndAnswers);
+        Engine.run(RULE, questionsAndAnswers);
     }
 
     private static boolean isEven(int number) {

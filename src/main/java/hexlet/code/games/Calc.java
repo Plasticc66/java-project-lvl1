@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Calc {
 
-    public static final String rule = "What is the result of the expression?";
+    public static final String RULE = "What is the result of the expression?";
 
     public static void playCalc() {
 
@@ -27,7 +27,7 @@ public class Calc {
 
             Calc.fillArray(i, questionsAndAnswers, number1, number2, operation);
         }
-        Engine.run(rule, questionsAndAnswers);
+        Engine.run(RULE, questionsAndAnswers);
     }
 
     public static void fillArray(int i, String[][] array, int num1, int num2, char operation) {
@@ -35,9 +35,18 @@ public class Calc {
         array[i][0] = "\nQuestion: " + num1 + " " + operation + " " + num2;
 
         switch (operation) {
-            case '+' -> array[i][1] = String.valueOf(num1 + num2);
-            case '-' -> array[i][1] = String.valueOf(num1 - num2);
-            case '*' -> array[i][1] = String.valueOf(num1 * num2);
+            case '+' -> {
+                array[i][1] = String.valueOf(num1 + num2);
+                break;
+            }
+            case '-' -> {
+                array[i][1] = String.valueOf(num1 - num2);
+                break;
+            }
+            case '*' -> {
+                array[i][1] = String.valueOf(num1 * num2);
+                break;
+            }
             default -> throw new Error("Unknown value: " + operation);
         }
     }
