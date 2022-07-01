@@ -11,7 +11,7 @@ public class Calc {
 
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
-        int operation;
+        char operation;
         int num1;
         int num2;
 
@@ -22,48 +22,34 @@ public class Calc {
 
         for (int i = 0; i < numRounds; i++) {
 
-            operation = Utils.getRandomInt(0, operationBound);
-            operation = 0;
+            operation = Utils.getRandomOperation();
             num1 = Utils.getRandomInt(leftBound, rightBound);
             num2 = Utils.getRandomInt(leftBound, rightBound);
 
-            Calc.fillArray(i, questionsAndAnswers, num1, num2, Calc.convertOperationToChar(operation));
+            Calc.fillArray(i, questionsAndAnswers, num1, num2, operation);
         }
         Engine.run(rule, questionsAndAnswers);
     }
 
     public static void fillArray(int i, String[][] array, int num1, int num2, char operation) {
 
-        array[i][0] = "\nQuestion: " + num1 + operation + num2;
+        array[i][0] = "\nQuestion: " + num1 + " " + operation + " " + num2;
 
         switch (operation) {
             case '+': {
                 array[i][1] = String.valueOf(num1 + num2);
             }
+            break;
             case '-': {
                 array[i][1] = String.valueOf(num1 - num2);
             }
+            break;
             case '*': {
                 array[i][1] = String.valueOf(num1 * num2);
             }
+            break;
             default:
                 throw new Error("Unknown value: " + operation);
-        }
-    }
-
-    public static char convertOperationToChar(int operation) {
-
-        switch (operation) {
-            case 0 -> {
-                return '+';
-            }
-            case 1 -> {
-                return '-';
-            }
-            case 2 -> {
-                return '*';
-            }
-            default -> throw new Error("Unknown value: " + operation);
         }
     }
 }
