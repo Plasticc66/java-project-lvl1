@@ -29,7 +29,7 @@ public class Progression {
             progression[skip] = "..";
 
             String question = String.join(" ", progression);
-            question = "Question:" + question;
+            question = "Question: " + question;
             questionsAndAnswers[i][0] = question;
 
             questionsAndAnswers[i][1] = answer;
