@@ -13,18 +13,18 @@ public class GCD {
 
         final int leftBound = 2;
         final int rightBound = 98;
-        int num1;
-        int num2;
+        int number1;
+        int number2;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
             do {
-                num1 = Utils.getRandomInt(leftBound, rightBound);
-                num2 = Utils.getRandomInt(leftBound, rightBound);
+                number1 = Utils.getRandomInt(leftBound, rightBound);
+                number2 = Utils.getRandomInt(leftBound, rightBound);
             }
-            while (GCD.gcd(num1, num2) == 1 || num1 == num2);
+            while (GCD.gcd(number1, number2) == 1 || number1 == number2);
 
-            questionsAndAnswers[i][0] = "\nQuestion: " + num1 + " " + num2;
-            questionsAndAnswers[i][1] = String.valueOf(GCD.gcd(num1, num2));
+            questionsAndAnswers[i][0] = "\nQuestion: " + number1 + " " + number2;
+            questionsAndAnswers[i][1] = String.valueOf(GCD.gcd(number1, number2));
         }
 
         Engine.run(rule, questionsAndAnswers);

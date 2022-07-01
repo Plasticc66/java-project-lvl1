@@ -11,26 +11,22 @@ public class Even {
 
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
-        int num;
+        int number;
         final int rightBound = 20;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
-            num = Utils.getRandomInt(0, rightBound);
+            number = Utils.getRandomInt(0, rightBound);
 
-            questionsAndAnswers[i][0] = "\nQuestion: " + num;
+            questionsAndAnswers[i][0] = "\nQuestion: " + number;
 
-            if (Even.isEven(num)) {
-                questionsAndAnswers[i][1] = "yes";
-            } else {
-                questionsAndAnswers[i][1] = "no";
-            }
+            questionsAndAnswers[i][1] = isEven(number) ? "yes" : "no";
         }
         Engine.run(rule, questionsAndAnswers);
     }
 
-    private static boolean isEven(int temp) {
-        return temp % 2 == 0;
+    private static boolean isEven(int number) {
+        return number % 2 == 0;
     }
 
 }

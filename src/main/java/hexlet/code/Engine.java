@@ -37,7 +37,6 @@ public class Engine {
                             + questionsAndAnswers[i][j + 1]
                             + "'.\nLet's try again, " + name + "!");
                     lose = true;
-                    //break;
                 }
             }
 

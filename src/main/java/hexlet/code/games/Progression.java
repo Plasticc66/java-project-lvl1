@@ -9,11 +9,9 @@ public class Progression {
 
     public static void playProgression() {
 
-        final int lengthArray = 10;
-        String[] progressionLine = new String[lengthArray];
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
-        final int rightBound = 21;
+        final int firstNumberRightBound = 21;
         final int stepRightBound = 9;
         final int stepLeftBound = 1;
         final int skipRightBound = 10;
@@ -21,28 +19,31 @@ public class Progression {
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
             int step = Utils.getRandomInt(stepLeftBound, stepRightBound);
-            int firstNum = Utils.getRandomInt(0, rightBound);
+            int firstNumber = Utils.getRandomInt(0, firstNumberRightBound);
 
-            progressionLine[0] = Integer.toString(firstNum);
-
-            for (int j = 1; j < progressionLine.length; j++) {
-                progressionLine[j] = Integer.toString(Integer.parseInt(progressionLine[j - 1]) + step);
-            }
+            final int lengthArray = 10;
+            String[] progression = Progression.makeProgression(firstNumber,step,lengthArray);
 
             int skip = Utils.getRandomInt(0, skipRightBound);
-            String answer = progressionLine[skip];
-            progressionLine[skip] = "..";
+            String answer = progression[skip];
+            progression[skip] = "..";
 
-            StringBuilder question = new StringBuilder("\nQuestion: ");
-            for (String s : progressionLine) {
-                question.append(s).append(" ");
-            }
-
+            String question = String.join(" ", progression);
             questionsAndAnswers[i][0] = question.toString();
+
             questionsAndAnswers[i][1] = answer;
         }
 
         Engine.run(rule, questionsAndAnswers);
 
+    }
+
+
+    private static String[] makeProgression(int first, int step, int length) {
+        String[] progression = new String[length];
+        progression[0] = Integer.toString(first);
+
+        for (int i = 1; i < length; i++) progression[i] = Integer.toString(Integer.parseInt(progression[i - 1]) + step);
+        return progression;
     }
 }

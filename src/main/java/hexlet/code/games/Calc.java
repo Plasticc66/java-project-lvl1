@@ -12,21 +12,20 @@ public class Calc {
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
         char operation;
-        int num1;
-        int num2;
+        int number1;
+        int number2;
 
         final int leftBound = 2;
         final int rightBound = 18;
-        final int operationBound = 3;
         final int numRounds = 3;
 
         for (int i = 0; i < numRounds; i++) {
 
             operation = Utils.getRandomOperation();
-            num1 = Utils.getRandomInt(leftBound, rightBound);
-            num2 = Utils.getRandomInt(leftBound, rightBound);
+            number1 = Utils.getRandomInt(leftBound, rightBound);
+            number2 = Utils.getRandomInt(leftBound, rightBound);
 
-            Calc.fillArray(i, questionsAndAnswers, num1, num2, operation);
+            Calc.fillArray(i, questionsAndAnswers, number1, number2, operation);
         }
         Engine.run(rule, questionsAndAnswers);
     }
@@ -36,20 +35,10 @@ public class Calc {
         array[i][0] = "\nQuestion: " + num1 + " " + operation + " " + num2;
 
         switch (operation) {
-            case '+': {
-                array[i][1] = String.valueOf(num1 + num2);
-            }
-            break;
-            case '-': {
-                array[i][1] = String.valueOf(num1 - num2);
-            }
-            break;
-            case '*': {
-                array[i][1] = String.valueOf(num1 * num2);
-            }
-            break;
-            default:
-                throw new Error("Unknown value: " + operation);
+            case '+' -> array[i][1] = String.valueOf(num1 + num2);
+            case '-' -> array[i][1] = String.valueOf(num1 - num2);
+            case '*' -> array[i][1] = String.valueOf(num1 * num2);
+            default -> throw new Error("Unknown value: " + operation);
         }
     }
 }
