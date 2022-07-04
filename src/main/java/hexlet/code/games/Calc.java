@@ -17,9 +17,8 @@ public class Calc {
 
         final int leftBound = 2;
         final int rightBound = 18;
-        final int numRounds = 3;
 
-        for (int i = 0; i < numRounds; i++) {
+        for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
             operation = Calc.getRandomOperation();
             number1 = Utils.getRandomInt(leftBound, rightBound);
