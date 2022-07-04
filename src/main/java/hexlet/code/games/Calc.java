@@ -21,7 +21,7 @@ public class Calc {
 
         for (int i = 0; i < numRounds; i++) {
 
-            operation = Utils.getRandomOperation();
+            operation = Calc.getRandomOperation();
             number1 = Utils.getRandomInt(leftBound, rightBound);
             number2 = Utils.getRandomInt(leftBound, rightBound);
 
@@ -46,6 +46,27 @@ public class Calc {
             case '*' -> {
                 array[i][1] = String.valueOf(num1 * num2);
                 break;
+            }
+            default -> throw new Error("Unknown value: " + operation);
+        }
+    }
+
+    public static char getRandomOperation() {
+        final int rightBound = 3;
+        int operationInt = Utils.getRandomInt(0, rightBound);
+        char operation = 0;
+        switch (operationInt) {
+            case 0 -> {
+                operation = '+';
+                return operation;
+            }
+            case 1 -> {
+                operation = '-';
+                return operation;
+            }
+            case 2 -> {
+                operation = '*';
+                return operation;
             }
             default -> throw new Error("Unknown value: " + operation);
         }
