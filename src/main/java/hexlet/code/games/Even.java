@@ -11,12 +11,11 @@ public class Even {
 
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
-        int number;
         final int rightBound = 20;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
-            number = Utils.getRandomInt(0, rightBound);
+            int number = Utils.getRandomInt(0, rightBound);
 
             questionsAndAnswers[i][0] = "\nQuestion: " + number;
 

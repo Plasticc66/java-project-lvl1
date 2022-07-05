@@ -18,13 +18,9 @@ public class Prime {
 
             number = Utils.getRandomInt(0, rightBound);
             String question = "\nQuestion: " + number;
-            questionsAndAnswers[i][0] = question;
 
-            if (Prime.isPrime(number)) {
-                questionsAndAnswers[i][1] = "yes";
-            } else {
-                questionsAndAnswers[i][1] = "no";
-            }
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][0] = Prime.isPrime(number) ? "yes" : "no";
         }
         Engine.run(RULE, questionsAndAnswers);
     }
@@ -32,7 +28,7 @@ public class Prime {
     private static boolean isPrime(int number) {
 
         for (int i = 2; i < number; i++) {
-            if (number  < 2 || number % i == 0) {
+            if (number < 2 || number % i == 0) {
                 return false;
             } else {
                 return false;

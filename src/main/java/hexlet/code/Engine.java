@@ -31,7 +31,7 @@ public class Engine {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
                         + questionsAndAnswers[i][j + 1]
                         + "'.\nLet's try again, " + name + "!");
-                break;
+                break;//return ??
             }
         }
 

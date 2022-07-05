@@ -24,30 +24,24 @@ public class Calc {
             number1 = Utils.getRandomInt(leftBound, rightBound);
             number2 = Utils.getRandomInt(leftBound, rightBound);
 
-            Calc.fillArray(i, questionsAndAnswers, number1, number2, operation);
+            questionsAndAnswers[i][0] = "\nQuestion: " + number1 + " " + operation + " " + number2;
+
+            questionsAndAnswers[i][1] = Calc.calculate(number1, number2, operation);
         }
         Engine.run(RULE, questionsAndAnswers);
     }
 
-    public static void fillArray(int i, String[][] array, int num1, int num2, char operation) {
+    public static String calculate(int num1, int num2, char operation) {
 
-        array[i][0] = "\nQuestion: " + num1 + " " + operation + " " + num2;
+        String answer;
 
         switch (operation) {
-            case '+' -> {
-                array[i][1] = String.valueOf(num1 + num2);
-                break;
-            }
-            case '-' -> {
-                array[i][1] = String.valueOf(num1 - num2);
-                break;
-            }
-            case '*' -> {
-                array[i][1] = String.valueOf(num1 * num2);
-                break;
-            }
+            case '+' -> answer = String.valueOf(num1 + num2);
+            case '-' -> answer = String.valueOf(num1 - num2);
+            case '*' -> answer = String.valueOf(num1 * num2);
             default -> throw new Error("Unknown value: " + operation);
         }
+        return answer;
     }
 
     public static char getRandomOperation() {
