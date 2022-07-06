@@ -33,15 +33,23 @@ public class Calc {
 
     public static String calculate(int num1, int num2, char operation) {
 
-        String answer;
-
         switch (operation) {
-            case '+' -> answer = String.valueOf(num1 + num2);
-            case '-' -> answer = String.valueOf(num1 - num2);
-            case '*' -> answer = String.valueOf(num1 * num2);
-            default -> throw new Error("Unknown value: " + operation);
+            case '+':
+                String answer = String.valueOf(num1 + num2);
+                return answer;
+
+            case '-':
+                answer = String.valueOf(num1 - num2);
+                return answer;
+
+            case '*':
+                answer = String.valueOf(num1 * num2);
+                return answer;
+
+            default:
+                throw new Error("Unknown value: " + operation);
+
         }
-        return answer;
     }
 
     public static char getRandomOperation() {

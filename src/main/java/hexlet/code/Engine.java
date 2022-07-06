@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Engine {
 
     public static final int WIN_FOR_END = 3;
-    private static int winStreakForCongrats = 0;
 
     public static void run(String rule, String[][] questionsAndAnswers) {
 
@@ -26,18 +25,14 @@ public class Engine {
 
             if (questionsAndAnswers[i][j + 1].equals(playerAnswer)) {
                 System.out.println("Correct!");
-                winStreakForCongrats++;
             } else {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
                         + questionsAndAnswers[i][j + 1]
                         + "'.\nLet's try again, " + name + "!");
-                break;//return ??
+                return;
             }
         }
 
-        if (winStreakForCongrats == WIN_FOR_END) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+        System.out.println("Congratulations, " + name + "!");
     }
-
 }
