@@ -14,15 +14,12 @@ public class GCD {
 
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
 
-        int number1;
-        int number2;
-
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
-            number1 = Utils.getRandomInt(LEFT_BOUND, RIGHT_BOUND);
-            number2 = Utils.getRandomInt(LEFT_BOUND, RIGHT_BOUND);
+            int number1 = Utils.getRandomInt(LEFT_BOUND, RIGHT_BOUND);
+            int number2 = Utils.getRandomInt(LEFT_BOUND, RIGHT_BOUND);
 
-            questionsAndAnswers[i][0] = "\nQuestion: " + number1 + " " + number2;
+            questionsAndAnswers[i][0] = number1 + " " + number2;
             questionsAndAnswers[i][1] = String.valueOf(GCD.gcd(number1, number2));
         }
 

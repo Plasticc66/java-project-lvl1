@@ -15,13 +15,13 @@ public class Progression {
         final int stepRightBound = 9;
         final int stepLeftBound = 1;
         final int skipRightBound = 10;
+        final int lengthArray = 10;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
             int step = Utils.getRandomInt(stepLeftBound, stepRightBound);
             int firstNumber = Utils.getRandomInt(0, firstNumberRightBound);
 
-            final int lengthArray = 10;
             String[] progression = Progression.makeProgression(firstNumber, step, lengthArray);
 
             int skip = Utils.getRandomInt(0, skipRightBound);
@@ -29,7 +29,6 @@ public class Progression {
             progression[skip] = "..";
 
             String question = String.join(" ", progression);
-            question = "Question: " + question;
             questionsAndAnswers[i][0] = question;
 
             questionsAndAnswers[i][1] = answer;

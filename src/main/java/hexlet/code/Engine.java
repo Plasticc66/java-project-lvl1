@@ -20,7 +20,7 @@ public class Engine {
 
         for (int i = 0; i < roundsNum; i++) {
             int j = 0;
-            System.out.println(questionsAndAnswers[i][j]);
+            System.out.println("\nQuestion: " + questionsAndAnswers[i][j]);
             String playerAnswer = scanner.nextLine();
 
             if (questionsAndAnswers[i][j + 1].equals(playerAnswer)) {

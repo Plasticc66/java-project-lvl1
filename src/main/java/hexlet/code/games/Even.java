@@ -17,7 +17,7 @@ public class Even {
 
             int number = Utils.getRandomInt(0, rightBound);
 
-            questionsAndAnswers[i][0] = "\nQuestion: " + number;
+            questionsAndAnswers[i][0] = String.valueOf(number);
 
             questionsAndAnswers[i][1] = isEven(number) ? "yes" : "no";
         }

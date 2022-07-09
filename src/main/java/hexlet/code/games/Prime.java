@@ -10,14 +10,12 @@ public class Prime {
     public static void playPrime() {
 
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
-
-        int number;
         final int rightBound = 101;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
-            number = Utils.getRandomInt(0, rightBound);
-            String question = "\nQuestion: " + number;
+            int number = Utils.getRandomInt(0, rightBound);
+            String question = String.valueOf(number);
 
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = Prime.isPrime(number) ? "yes" : "no";
@@ -28,7 +26,7 @@ public class Prime {
     private static boolean isPrime(int number) {
 
         for (int i = 2; i < number; i++) {
-            if (number != 0 && number % i == 0) {
+            if (number < 2 || number % i == 0) {
                 return false;
             }
         }

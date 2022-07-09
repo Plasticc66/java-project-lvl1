@@ -6,70 +6,48 @@ import hexlet.code.Utils;
 public class Calc {
 
     public static final String RULE = "What is the result of the expression?";
+    private static final char[] OPERATORS = {'+', '-', '*'};
 
     public static void playCalc() {
 
         String[][] questionsAndAnswers = new String[Engine.WIN_FOR_END][2];
-
-        char operation;
-        int number1;
-        int number2;
 
         final int leftBound = 2;
         final int rightBound = 18;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
 
-            operation = Calc.getRandomOperation();
-            number1 = Utils.getRandomInt(leftBound, rightBound);
-            number2 = Utils.getRandomInt(leftBound, rightBound);
+            int indexOperator = Utils.getRandomInt(0, OPERATORS.length - 1);
+            char operator = OPERATORS[indexOperator];
 
-            questionsAndAnswers[i][0] = "\nQuestion: " + number1 + " " + operation + " " + number2;
+            int number1 = Utils.getRandomInt(leftBound, rightBound);
+            int number2 = Utils.getRandomInt(leftBound, rightBound);
 
-            questionsAndAnswers[i][1] = Calc.calculate(number1, number2, operation);
+            questionsAndAnswers[i][0] = number1 + " " + operator + " " + number2;
+
+            questionsAndAnswers[i][1] = Calc.calculate(number1, number2, operator);
         }
         Engine.run(RULE, questionsAndAnswers);
     }
 
-    public static String calculate(int num1, int num2, char operation) {
+    public static String calculate(int number1, int number2, char operator) {
 
-        switch (operation) {
+        switch (operator) {
             case '+':
-                String answer = String.valueOf(num1 + num2);
+                String answer = String.valueOf(number1 + number2);
                 return answer;
 
             case '-':
-                answer = String.valueOf(num1 - num2);
+                answer = String.valueOf(number1 - number2);
                 return answer;
 
             case '*':
-                answer = String.valueOf(num1 * num2);
+                answer = String.valueOf(number1 * number2);
                 return answer;
 
             default:
-                throw new Error("Unknown value: " + operation);
+                throw new Error("Unknown value: " + operator);
 
-        }
-    }
-
-    public static char getRandomOperation() {
-        final int rightBound = 3;
-        int operationInt = Utils.getRandomInt(0, rightBound);
-        char operation = 0;
-        switch (operationInt) {
-            case 0 -> {
-                operation = '+';
-                return operation;
-            }
-            case 1 -> {
-                operation = '-';
-                return operation;
-            }
-            case 2 -> {
-                operation = '*';
-                return operation;
-            }
-            default -> throw new Error("Unknown value: " + operation);
         }
     }
 }
