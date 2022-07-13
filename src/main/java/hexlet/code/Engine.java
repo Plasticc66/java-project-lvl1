@@ -16,9 +16,8 @@ public class Engine {
         System.out.println("\nHello, " + name + "!");
 
         System.out.println(rule);
-        final int roundsNum = 3;
 
-        for (int i = 0; i < roundsNum; i++) {
+        for (int i = 0; i < WIN_FOR_END; i++) {
             int j = 0;
             System.out.println("\nQuestion: " + questionsAndAnswers[i][j]);
             String playerAnswer = scanner.nextLine();

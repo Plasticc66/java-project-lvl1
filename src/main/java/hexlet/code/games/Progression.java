@@ -14,7 +14,6 @@ public class Progression {
         final int firstNumberRightBound = 21;
         final int stepRightBound = 9;
         final int stepLeftBound = 1;
-        final int skipRightBound = 10;
         final int lengthArray = 10;
 
         for (int i = 0; i < Engine.WIN_FOR_END; i++) {
@@ -24,7 +23,7 @@ public class Progression {
 
             String[] progression = Progression.makeProgression(firstNumber, step, lengthArray);
 
-            int skip = Utils.getRandomInt(0, skipRightBound);
+            int skip = Utils.getRandomInt(0, lengthArray);
             String answer = progression[skip];
             progression[skip] = "..";
 

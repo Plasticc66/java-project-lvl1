@@ -24,10 +24,13 @@ public class Prime {
     }
 
     private static boolean isPrime(int number) {
-
-        for (int i = 2; i < number; i++) {
-            if (number < 2 || number % i == 0) {
-                return false;
+        if (number < 2) {
+            return false;
+        } else {
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
             }
         }
         return true;
